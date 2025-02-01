@@ -7,8 +7,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
-   @vite('resources/js/app.js')
-   @vite('resources/css/style.css')
+  @vite('resources/js/app.js')
+  @vite('resources/css/style.css')
   <body>
     <x-nav-bar />
     <x-home />
