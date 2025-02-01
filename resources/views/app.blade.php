@@ -10,6 +10,9 @@
   @vite('resources/js/app.js')
   @vite('resources/css/style.css')
   <body>
+    @if(config("app.env")==="production")
+    <x-overlay />
+    @endif
     <x-nav-bar />
     <x-home />
     <x-footer />
