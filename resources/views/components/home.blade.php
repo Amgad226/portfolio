@@ -10,9 +10,9 @@
 <x-section id="test">
     @include('partials.test')
 </x-section>
-<x-section id="projects">
+{{-- <x-section id="projects">
     @include('partials.projects')
-</x-section>
+</x-section> --}}
 <x-section id="personal-projects">
     @include('partials.personal-projects')
 </x-section>

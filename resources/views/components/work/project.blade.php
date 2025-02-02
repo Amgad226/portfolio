@@ -35,14 +35,6 @@
                 @endif
                 <h1>{{ $company_name }}</h1>
                 <p>{{ $slot }}</p>
-                {{-- <img src="{{ $img }}" alt="" style="width: 20% ; height:20%">
-                <img src="{{ $img }}" alt="" style="width: 20% ; height:20%">
-                <img src="{{ $img }}" alt="" style="width: 20% ; height:20%">
-                <img src="{{ $img }}" alt="" style="width: 20% ; height:20%">
-                <img src="{{ $img }}" alt="" style="width: 20% ; height:20%">
-                <img src="{{ $img }}" alt="" style="width: 20% ; height:20%"> --}}
-
-
             </div>
 
             @if ($right != 1)

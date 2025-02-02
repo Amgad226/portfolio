@@ -16,6 +16,5 @@
     <x-nav-bar />
     <x-home />
     <x-footer />
-    <script src="script.js"></script>
   </body>
 </html>
