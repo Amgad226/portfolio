@@ -196,7 +196,7 @@
     object-fit: contain;
     /* object-fit: cover; */
 
-    filter: grayscale(.5);
+    filter: grayscale(.9);
 
 }
 
