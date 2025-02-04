@@ -247,7 +247,7 @@
 
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/source-safe/logo.psng',
+        'logo' => './assets/notfound.png',
         'logo_background' => '#0f0f0f',
         'project_title' => 'Dental Clinic Management',
         'project_description' => "I was part of the team that developed Back-End side Using Nest.js, Prisma, GraphQL & Docker for a Dental Clinic Management system
@@ -278,7 +278,7 @@
 
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/source-safe/logo.pngg',
+        'logo' => './assets/notfound.png',
         'logo_background' => 'green',
         'project_title' => 'Ticket Management System',
         'project_description' =>
@@ -357,8 +357,8 @@
     <h1 style=" font-size: 2rem; margin-bottom: 40px; color: #333;">Fullstack projects</h1>
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/tt/logo.jpg',
-        'logo_background' => 'blue',
+        'logo' => './assets/personal-projects/tt/logo.png',
+        'logo_background' => '#4c6aaf',
         'project_title' => 'TT',
         'project_description' => 'TT" is a chat application that supports ',
     
@@ -371,15 +371,15 @@
             'notifications',
         ],
         'responsibilities' => ['Led '],
-        'images' => ['./assets/personal-projects/tt/1.jpg', './assets/personal-projects/tt/2.jpg', './assets/personal-projects/tt/3.jpg', './assets/personal-projects/tt/4.jpg'],
+        'images' => ['./assets/personal-projects/tt/1.png', './assets/personal-projects/tt/2.png', './assets/personal-projects/tt/3.png', './assets/personal-projects/tt/4.png'],
         'tags' => [
-            'Laravel ' => 'blue',
-            'Mysql' => 'blue',
-            'Pusher' => 'blue',
-            'Blade' => 'blue',
-            'CSS' => 'blue',
-            'jQuery' => 'blue',
-            'Firebase' => 'blue',
+            'Laravel ' => '#4c6aaf',
+            'Mysql' => '#4c6aaf',
+            'Pusher' => '#4c6aaf',
+            'Blade' => '#4c6aaf',
+            'CSS' => '#4c6aaf',
+            'jQuery' => '#4c6aaf',
+            'Firebase' => '#4c6aaf',
         ],
         'demo' => '#',
     ])
@@ -430,7 +430,7 @@
     @endcomponent
 
     @component('components.personal-project.personal-project', [
-        'logo' => '',
+        'logo' => './assets/personal-projects/snake/logo.avif',
         'logo_background' => 'black',
         'project_title' => 'Snake Nokia Game',
         'project_description' =>
@@ -439,6 +439,8 @@
             'C++ ' => 'black',
         ],
         'demo' => '#',
+        'images' => ['./assets/personal-projects/snake/1.jpg', './assets/personal-projects/snake/2.jpg', './assets/personal-projects/snake/3.jpg'],
+        
     ])
     @endcomponent
 
