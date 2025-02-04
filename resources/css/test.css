@@ -33,7 +33,7 @@
 
 .work-image img {
     max-width: 50%;
-    border-radius: 20p0x;
+    border-radius: 2rem;
     box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.2);
     /* object-fit: cover; */
     transition: transform 0.3s ease;

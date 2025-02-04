@@ -46,5 +46,5 @@
 
       </div>
 
-      <x-utils.arrow-move :to="'./#projects'"></x-utils.arrow-move>
+      <x-utils.arrow-move :to="'./#work-projects'"></x-utils.arrow-move>
   </section>

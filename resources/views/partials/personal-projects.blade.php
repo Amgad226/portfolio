@@ -6,9 +6,10 @@
         /* background: linear-gradient(135deg, #e3f2fd, #e1bee7); */
     }
 
-    .personal-projects {
+    .personal-project {
         /* max-width: 1200px; */
         /* margin: 0 auto; */
+        margin: 20px;
         display: grid;
         grid-template-columns: repeat(1, minmax(300px, 1fr));
         gap: 30px;
@@ -16,18 +17,19 @@
 
     /* Mobile View: Switch to 1 column */
     @media (max-width: 768px) {
-        .personal-projects {
+        .personal-project {
 
             grid-template-columns: repeat(1, minmax(300px, 1fr));
         }
     }
 
     .personal-project-card {
-        /* background: #4d3b3b; */
-        border-radius: 16px;
+        border-radius: 1rem;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         transition: transform 0.3s, box-shadow 0.3s;
+        border: 1px solid #222
+
     }
 
     .personal-project-card:hover {
@@ -48,13 +50,43 @@
     .project-logo img {
         max-height: 100%;
         max-width: 100%;
+        /* height: 100%; */
+        /* width: 100%; */
         object-fit: contain;
+        border-radius: 2rem;
+        /* background: #0288d1 */
+        border: 2px solid #5e5e5e;
+
     }
 
     .project-content {
         padding: 20px;
+        display: none;
+        transition: max-height 0.3s ease-in-out;
     }
 
+   
+
+    .project-content {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.toggle-btn {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.project-content.active {
+        display: block;
+    }
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
     .project-name {
         font-size: 1.8rem;
         margin-bottom: 10px;
@@ -158,7 +190,25 @@
         color: #444;
     }
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".toggle-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            const projectContent = this.closest(".personal-project-card").querySelector(".project-content");
+            
+            if (projectContent.style.display === "none" || projectContent.style.display === "") {
+                projectContent.style.display = "block";
+                this.textContent = "Close";
+            } else {
+                projectContent.style.display = "none";
+                this.textContent = "Expand";
+            }
+        });
+    });
+});
 
+
+</script>
 <section id="personal-projects">
     <h1 style="text-align: center; font-size: 3rem; margin-bottom: 40px; color: #333;">Personal Projects</h1>
 
@@ -171,7 +221,7 @@
         'logo_background' => 'black',
         'project_title' => 'York-British-Academy',
         'project_description' => "As a backend developer and DevOps lead, I contributed to a comprehensive platform for 
-                                                            ‘York-British-Academy’ designed to centralize services for trainees and trainers, eliminating reliance on multiple platforms.",
+                                                                ‘York-British-Academy’ designed to centralize services for trainees and trainers, eliminating reliance on multiple platforms.",
     
         'features' => [
             'Training Sessions: Video conferencing, session settings, screen sharing, collaborative whiteboard, session recording, break management, online assignments with anti-fraud measures, and reporting system.',
@@ -214,7 +264,7 @@
         'logo_background' => '#fff2ff',
         'project_title' => 'Source-Safe',
         'project_description' => "Source Safe’ is a web-based system for managing collaborative file work | Source Safe scales to support up to 100 simultaneous users by implement load balancing with Round Rouben strategy.
-                            I primarily work on backend development,  ",
+                                I primarily work on backend development,  ",
     
         'features' => [
             'It prevents parallel modifications by categorizing files as "free" or "in use" for specific users.',
@@ -251,8 +301,8 @@
         'logo_background' => '#0f0f0f',
         'project_title' => 'Dental Clinic Management',
         'project_description' => "I was part of the team that developed Back-End side Using Nest.js, Prisma, GraphQL & Docker for a Dental Clinic Management system
-                    that allows doctor to manage their patient profiles, reservations, appointments, lab orders and visualize medicines indications.
-                    It has two platforms:",
+                        that allows doctor to manage their patient profiles, reservations, appointments, lab orders and visualize medicines indications.
+                        It has two platforms:",
     
         // 'features' => [
         //     'It prevents parallel modifications by categorizing files as "free" or "in use" for specific users.',
@@ -340,7 +390,6 @@
         'project_description' =>
             '"X-Buyer" which is an online store of a flutter app that sells products which are close to expiration and applies discounts on them.',
     
-
         'images' => [
             './assets/personal-projects/x-buyer/1.jpg',
             './assets/personal-projects/x-buyer/2.jpg',
@@ -371,7 +420,12 @@
             'notifications',
         ],
         'responsibilities' => ['Led '],
-        'images' => ['./assets/personal-projects/tt/1.png', './assets/personal-projects/tt/2.png', './assets/personal-projects/tt/3.png', './assets/personal-projects/tt/4.png'],
+        'images' => [
+            './assets/personal-projects/tt/1.png',
+            './assets/personal-projects/tt/2.png',
+            './assets/personal-projects/tt/3.png',
+            './assets/personal-projects/tt/4.png',
+        ],
         'tags' => [
             'Laravel ' => '#4c6aaf',
             'Mysql' => '#4c6aaf',
@@ -439,8 +493,11 @@
             'C++ ' => 'black',
         ],
         'demo' => '#',
-        'images' => ['./assets/personal-projects/snake/1.jpg', './assets/personal-projects/snake/2.jpg', './assets/personal-projects/snake/3.jpg'],
-        
+        'images' => [
+            './assets/personal-projects/snake/1.jpg',
+            './assets/personal-projects/snake/2.jpg',
+            './assets/personal-projects/snake/3.jpg',
+        ],
     ])
     @endcomponent
 

@@ -1,6 +1,6 @@
 <section id="profile">
     <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Amjad Alwattar profile picture" />
+        <img  class= "" src="./assets/profile-pic.png" alt="Amjad Alwattar profile picture" />
     </div>
     <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
