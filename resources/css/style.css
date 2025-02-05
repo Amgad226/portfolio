@@ -92,3 +92,48 @@ section {
   height: 2rem;
 }
 
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  font-size: 2rem;
+
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.title {
+  font-size: 4rem;
+  text-align: center;
+}
+
+
+.section__pic-container {
+  display: flex;
+  height: 500px;
+  width: 500px;
+  margin: auto 0;
+
+}
+.section__pic-container > img {
+  border-radius: 2rem;
+  border: 1px solid rgb(216, 216, 216);
+  box-shadow: 4px 8px 27px 13px rgba(54, 54, 54, 0.4);
+}
+@media screen and (max-width: 900px) {
+  section{
+    margin: 0;
+  }
+}
+

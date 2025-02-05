@@ -1,12 +1,13 @@
 @vite('resources/css/profile.css')
 <section id="profile">
-    <div class="section__pic-container">
-        <img  class= "" src="./assets/profile-pic.png" alt="Amjad Alwattar profile picture" />
-    </div>
-    <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
+
+        <div class="profile-pic-container">
+            <img  class= "" src="./assets/profile-pic.png" alt="Amjad Alwattar profile picture" />
+        </div>
+    <div class="profile-text">
+        <p class="profile-text-p1">Hello, I'm</p>
         <h1 class="title">Amjad Alwattar</h1>
-        <p class="section__text__p2">Backend Developer & Devops</p>
+        <p class="profile-text-p2">Backend Developer & Devops</p>
         <div class="btn-container">
             <x-button type="button" class="btn btn-color-2"
                 onclick="window.open('{{ asset('assets/resume-example.pdf') }}')">

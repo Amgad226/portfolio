@@ -4,6 +4,8 @@
 <x-section id="about">
     @include('partials.about')
 </x-section>
+
+
 <x-section id="experience">
     @include('partials.experience')
 </x-section>
