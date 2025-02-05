@@ -1,3 +1,4 @@
+
 <div class="work-container" style="background-color: {{ $color }}">
     <section>
 

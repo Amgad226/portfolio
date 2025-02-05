@@ -1,4 +1,5 @@
-  <section id="experience">
+@vite('resources/css/experience.css')
+<section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">

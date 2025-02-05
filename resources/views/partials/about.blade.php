@@ -1,4 +1,5 @@
-    <section id="about">
+   @vite('resources/css/about.css')
+   <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">

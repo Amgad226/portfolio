@@ -1,4 +1,5 @@
-   <section id="contact">
+@vite('resources/css/contact.css')
+<section id="contact">
        <p class="section__text__p1">Get in Touch</p>
        <h1 class="title">Contact Me</h1>
        <div class="contact-info-upper-container">

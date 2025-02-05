@@ -1,3 +1,4 @@
+@vite('resources/css/profile.css')
 <section id="profile">
     <div class="section__pic-container">
         <img  class= "" src="./assets/profile-pic.png" alt="Amjad Alwattar profile picture" />
