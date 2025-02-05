@@ -13,6 +13,6 @@
                 </ul>
             </div>
         </nav>
-        <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+        <p>Copyright &#169; 2025 Amjad Alwattar. All Rights Reserved.</p>
     </footer>
 </div>
