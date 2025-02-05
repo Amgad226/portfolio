@@ -1,4 +1,4 @@
-@vite('resources/css/test.css')
+@vite('resources/css/work-projects.css')
 
 <div class="image-dialog">
 

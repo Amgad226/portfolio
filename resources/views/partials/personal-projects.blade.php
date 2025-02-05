@@ -1,227 +1,38 @@
-<style>
-    #personal-projects {
-        /* width: 100vw; */
-        padding: 40px 20px;
-        box-sizing: border-box;
-        /* background: linear-gradient(135deg, #e3f2fd, #e1bee7); */
-    }
+@vite('resources/css/personal-projects.css')
 
-    .personal-project {
-        /* max-width: 1200px; */
-        /* margin: 0 auto; */
-        margin: 20px;
-        display: grid;
-        grid-template-columns: repeat(1, minmax(300px, 1fr));
-        gap: 30px;
-    }
-
-    /* Mobile View: Switch to 1 column */
-    @media (max-width: 768px) {
-        .personal-project {
-
-            grid-template-columns: repeat(1, minmax(300px, 1fr));
-        }
-    }
-
-    .personal-project-card {
-        border-radius: 1rem;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: transform 0.3s, box-shadow 0.3s;
-        border: 1px solid #222
-
-    }
-
-    .personal-project-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .project-logo {
-        background-color: #f9f9f9;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        height: 120px;
-        border-bottom: 1px solid #eee;
-    }
-
-    .project-logo img {
-        max-height: 100%;
-        max-width: 100%;
-        /* height: 100%; */
-        /* width: 100%; */
-        object-fit: contain;
-        border-radius: 2rem;
-        /* background: #0288d1 */
-        border: 2px solid #5e5e5e;
-
-    }
-
-    .project-content {
-        padding: 20px;
-        display: none;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-   
-
-    .project-content {
-    display: none;
-    padding: 10px;
-    border-top: 1px solid #ddd;
-}
-
-.toggle-btn {
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-}
-.project-content.active {
-        display: block;
-    }
-.toggle-btn:hover {
-    background-color: #0056b3;
-}
-    .project-name {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-        color: #37474f;
-    }
-
-    .project-description {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #616161;
-        margin-bottom: 20px;
-    }
-
-    .project-images {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 10px;
-    }
-
-    .project-images img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        transition: transform 0.3s;
-    }
-
-    .project-images img:hover {
-        transform: scale(1.1);
-    }
-
-    .project-link {
-        display: inline-block;
-        text-decoration: none;
-        font-weight: bold;
-        color: #0288d1;
-        margin-top: 10px;
-        transition: color 0.3s;
-    }
-
-    .project-link:hover {
-        color: #01579b;
-    }
-
-    /* Tags */
-    .tags {
-        margin-bottom: 10px;
-    }
-
-    .tag {
-        display: inline-block;
-        background: #34475c;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 0.9rem;
-        margin-right: 5px;
-    }
-
-    .project-card {
-        /* background: #f9f9f9; Light background */
-        border-radius: 12px;
-        padding: 20px;
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-        font-family: 'Arial', sans-serif;
-        line-height: 1.6;
-        /* max-width: 700px; */
-        margin: auto;
-    }
-
-    .project-title {
-        font-size: 20px;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    .project-description {
-        font-size: 16px;
-        color: #555;
-    }
-
-    .section-title {
-        font-size: 18px;
-        font-weight: bold;
-        color: #222;
-        margin-top: 15px;
-    }
-
-    .features-list,
-    .responsibilities-list {
-        padding-left: 20px;
-        list-style: none;
-    }
-
-    .features-list li,
-    .responsibilities-list li {
-        background: url('https://cdn-icons-png.flaticon.com/16/845/845646.png') no-repeat left center;
-        background-size: 16px;
-        padding-left: 25px;
-        margin-bottom: 8px;
-        color: #444;
-    }
-</style>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".toggle-btn").forEach(button => {
-        button.addEventListener("click", function () {
-            const projectContent = this.closest(".personal-project-card").querySelector(".project-content");
-            
-            if (projectContent.style.display === "none" || projectContent.style.display === "") {
-                projectContent.style.display = "block";
-                this.textContent = "Close";
-            } else {
-                projectContent.style.display = "none";
-                this.textContent = "Expand";
-            }
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll(".toggle-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                const projectContent = this.closest(".personal-project-card").querySelector(
+                    ".project-content");
+
+                if (projectContent.style.display === "none" || projectContent.style.display ===
+                    "") {
+                    projectContent.style.display = "block";
+                    this.textContent = "Close";
+                } else {
+                    projectContent.style.display = "none";
+                    this.textContent = "Expand";
+                }
+            });
         });
     });
-});
-
-
 </script>
+
 <section id="personal-projects">
-    <h1 style="text-align: center; font-size: 3rem; margin-bottom: 40px; color: #333;">Personal Projects</h1>
+    <h1 class ="title">Personal Projects</h1>
 
 
     <!-- Project 2 -->
-    <h1 style=" font-size: 2rem; margin-bottom: 40px; color: #333;">Backend projects</h1>
+    <h1 class ="personal-project-title">Backend projects</h1>
 
     @component('components.personal-project.personal-project', [
         'logo' => './assets/personal-projects/york/logo.webp',
         'logo_background' => 'black',
         'project_title' => 'York-British-Academy',
         'project_description' => "As a backend developer and DevOps lead, I contributed to a comprehensive platform for 
-                                                                ‘York-British-Academy’ designed to centralize services for trainees and trainers, eliminating reliance on multiple platforms.",
+                                                                        ‘York-British-Academy’ designed to centralize services for trainees and trainers, eliminating reliance on multiple platforms.",
     
         'features' => [
             'Training Sessions: Video conferencing, session settings, screen sharing, collaborative whiteboard, session recording, break management, online assignments with anti-fraud measures, and reporting system.',
@@ -264,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'logo_background' => '#fff2ff',
         'project_title' => 'Source-Safe',
         'project_description' => "Source Safe’ is a web-based system for managing collaborative file work | Source Safe scales to support up to 100 simultaneous users by implement load balancing with Round Rouben strategy.
-                                I primarily work on backend development,  ",
+                                        I primarily work on backend development,  ",
     
         'features' => [
             'It prevents parallel modifications by categorizing files as "free" or "in use" for specific users.',
@@ -301,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
         'logo_background' => '#0f0f0f',
         'project_title' => 'Dental Clinic Management',
         'project_description' => "I was part of the team that developed Back-End side Using Nest.js, Prisma, GraphQL & Docker for a Dental Clinic Management system
-                        that allows doctor to manage their patient profiles, reservations, appointments, lab orders and visualize medicines indications.
-                        It has two platforms:",
+                                that allows doctor to manage their patient profiles, reservations, appointments, lab orders and visualize medicines indications.
+                                It has two platforms:",
     
         // 'features' => [
         //     'It prevents parallel modifications by categorizing files as "free" or "in use" for specific users.',
@@ -403,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'demo' => '#',
     ])
     @endcomponent
-    <h1 style=" font-size: 2rem; margin-bottom: 40px; color: #333;">Fullstack projects</h1>
+    <h1 class ="personal-project-title">Fullstack projects</h1>
 
     @component('components.personal-project.personal-project', [
         'logo' => './assets/personal-projects/tt/logo.png',
@@ -439,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ])
     @endcomponent
 
-    <h1 style=" font-size: 2rem; margin-bottom: 40px; color: #333;">Games and Simulation Projects</h1>
+    <h1 class ="personal-project-title">Games and Simulation Projects</h1>
 
     @component('components.personal-project.personal-project', [
         'logo' => './assets/personal-projects/soku-number/logo.jpg',

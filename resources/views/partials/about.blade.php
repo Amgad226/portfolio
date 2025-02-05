@@ -5,7 +5,7 @@
         <div class="section__pic-container">
           <img
             src="./assets/about-pic.png"
-            alt="Profile picture"
+            alt="About me picture"
             class="about-pic"
           />
         </div>

@@ -37,6 +37,8 @@
     box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.2);
     /* object-fit: cover; */
     transition: transform 0.3s ease;
+    margin: 10px;
+
     /* margin-bottom: 10px; */
 }
 
@@ -124,6 +126,7 @@
     font-size: 1.4rem;
     line-height: 1.8;
     color: #e8f5f5;
+    padding-inline-start: 2rem; 
 }
 
 .work-details p,
