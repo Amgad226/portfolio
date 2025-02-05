@@ -15,6 +15,6 @@
     @endif
     <x-nav-bar />
     <x-home />
-    <x-footer />
+    {{-- <x-footer /> --}}
   </body>
 </html>
