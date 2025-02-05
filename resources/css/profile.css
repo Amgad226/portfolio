@@ -248,26 +248,28 @@
         font-size: .8rem;
     }
 
-    
+
 
 }
+
 @media screen and (max-width: 300px) {
 
 
-        .profile-pic-container {
-            margin-inline-start: 2rem;
-        }
-
-
-
+    .profile-pic-container {
+        margin-inline-start: 2rem;
     }
-    @media screen and (max-width: 250px) {
-
-
-        .profile-pic-container {
-            margin-inline-start: 0rem;
-        }
 
 
 
+}
+
+@media screen and (max-width: 250px) {
+
+
+    .profile-pic-container {
+        margin-inline-start: 0rem;
     }
+
+
+
+}
