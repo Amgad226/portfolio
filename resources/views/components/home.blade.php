@@ -4,12 +4,13 @@
 <x-section id="about">
     @include('partials.about')
 </x-section>
-{{-- 
+
 
 <x-section id="experience">
     @include('partials.experience')
 </x-section>
-<x-section id="work-projects">
+
+{{-- <x-section id="work-projects">
     @include('partials.work-projects')
 </x-section>
 
