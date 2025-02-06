@@ -1,6 +1,6 @@
    @vite('resources/css/about.css')
    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
+      <p class="about-p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="about-section-container">
    
@@ -12,12 +12,12 @@
           </div>
 
           <div class="about-text-container">
-            {{-- <p> --}}
-              Passionate software engineering student with solid backend development skills cultivated through real-world corporate projects.
+            <p>
+              Passionate software engineer with solid backend development skills cultivated through real-world corporate projects.
               Skilled in building reliable backend solutions suitable for various project needs. Currently diving into DevOps to blend software
               development with IT operations, aiming to optimize project workflows and team harmony. Always on the lookout for new challenges
               to broaden expertise and drive innovation at the crossroads of software engineering and DevOps.
-            {{-- </p> --}}
+            </p>
           </div>
         </div>
       </div>

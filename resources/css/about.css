@@ -1,35 +1,44 @@
-
 /* ABOUT SECTION */
 
 #about {
     position: relative;
-  }
-  
-  .about-containers {
+}
+
+.about-p1 {
+    font-size: 2rem;
+
+    text-align: center;
+}
+
+.about-containers {
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-  }
-  
-  .about-details-container {
+}
+
+.about-details-container {
     justify-content: center;
     flex-direction: column;
-  }
-  
-  .about-containers,
-  .about-details-container {
+    /* margin :0; */
+}
+
+.about-containers,
+.about-details-container {
     display: flex;
-  }
-  
-  
-  
-  .arrow {
+}
+
+
+
+.arrow {
     position: absolute;
     right: -5rem;
     bottom: 2.5rem;
-  }
-  
-  .details-container {
+}
+
+.details-container {
+    width: 50%;
+    align-items: center;
+    align-content: center;
     padding: 1.5rem;
     flex: 1;
     background: white;
@@ -37,43 +46,47 @@
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
-  
-  }
-
-  .about-section-pic-container {
-    display: flex;
-    height: 500px;
-    width: 500px;
-    margin: auto ;
-  
-  }
-  .about-section-pic-container > img {
-    border-radius: 2rem;
-    border: 1px solid rgb(216, 216, 216);
-    box-shadow: 4px 8px 27px 13px rgba(54, 54, 54, 0.4);
-  }
-  .about-section-container {
-    display: flex;
-    gap: 4rem;
-    height: 80%;
-  }
-  
-  .about-text-container{
-    display: block;
-  }
- 
-  @media screen and (max-width: 900px) {
-    section{
-      height: 1000px;
-      width: 100%;
-      /* margin: 50px; */
-    }
-    .about-section-container{
-      flex-direction: column;
-    }
-    .about-containers{
-      flex-direction: column;
-    }
 
 }
 
+.about-section-pic-container {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+
+}
+
+.about-section-pic-container>img {
+    border-radius: 2rem;
+    border: 1px solid rgb(216, 216, 216);
+    box-shadow: 4px 8px 27px 13px rgba(54, 54, 54, 0.4);
+}
+
+.about-text-container {
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+    section {
+        /* height: 1000px; */
+        /* width: 100%; */
+        /* margin: 50px; */
+    }
+
+    .about-containers {
+        flex-direction: column;
+        /* width: 50%; */
+    }
+
+    .details-container {
+        margin-inline-start: 20%;
+        padding: 2rem;
+
+    }
+
+    .about-text-container {
+        margin-inline-start: 20%;
+        width: 70%;
+    }
+}
