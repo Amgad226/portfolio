@@ -1,4 +1,3 @@
-
 /* CONTACT */
 
 #contact {
@@ -6,35 +5,43 @@
     justify-content: center;
     flex-direction: column;
     height: 70vh;
-  }
-  
-  .contact-info-upper-container {
+}
+
+
+
+.contact-info-upper-container {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     background: (250, 250, 250);
     margin: 2rem auto;
     padding: 0.5rem;
-  }
-  
-  .contact-info-container {
+}
+
+.contact-info-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     margin: 1rem;
-  }
-  
-  .contact-info-container p {
+}
+
+.contact-info-container p {
     font-size: larger;
-  }
-  
-  .contact-icon {
+}
+
+.contact-icon {
     cursor: default;
-  }
-  
-  .email-icon {
+}
+
+.email-icon {
     height: 2.5rem;
+}
+@media screen and (max-width: 900px) {
+  .contact-info-upper-container{
+    flex-direction: column;
   }
+}

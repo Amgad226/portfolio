@@ -8,3 +8,8 @@ footer {
     text-align: center;
   }
   
+  @media screen and (max-width: 900px) {
+    .nav-links-container{
+      display: none;
+    }
+  }

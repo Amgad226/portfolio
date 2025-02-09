@@ -11,10 +11,10 @@
   @vite('resources/css/style.css')
   <body>
     @if(config("app.env")==="production")
-    <x-overlay />
+    {{-- <x-overlay /> --}}
     @endif
     <x-nav-bar />
     <x-home />
-    {{-- <x-footer /> --}}
+    <x-footer />
   </body>
 </html>
