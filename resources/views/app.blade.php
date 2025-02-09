@@ -18,5 +18,6 @@
     <x-nav-bar />
     <x-home />
     <x-footer />
+    <x-utils.toast />
 </body>
 </html>

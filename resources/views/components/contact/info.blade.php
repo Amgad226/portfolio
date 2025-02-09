@@ -28,6 +28,7 @@
         inp.remove();
         const icon = document.getElementById("copiedNumber")
         icon.src = '/assets/copied.png'
+        launch_toast("phone number copied",'/assets/copied.png')
 
     }
 </script>
