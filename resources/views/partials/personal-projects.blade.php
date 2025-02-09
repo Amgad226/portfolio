@@ -32,7 +32,7 @@
         'logo_background' => 'black',
         'project_title' => 'York-British-Academy',
         'project_description' => "As a backend developer and DevOps lead, I contributed to a comprehensive platform for 
-                                                                        ‘York-British-Academy’ designed to centralize services for trainees and trainers, eliminating reliance on multiple platforms.",
+                                                                            ‘York-British-Academy’ designed to centralize services for trainees and trainers, eliminating reliance on multiple platforms.",
     
         'features' => [
             'Training Sessions: Video conferencing, session settings, screen sharing, collaborative whiteboard, session recording, break management, online assignments with anti-fraud measures, and reporting system.',
@@ -72,10 +72,11 @@
 
     @component('components.personal-project.personal-project', [
         'logo' => './assets/personal-projects/source-safe/logo.png',
-        'logo_background' => '#fff2ff',
+        'logo_background' => '#F14A5C',
+        'logo_inner_background' => '#FFFFFF',
         'project_title' => 'Source-Safe',
         'project_description' => "Source Safe’ is a web-based system for managing collaborative file work | Source Safe scales to support up to 100 simultaneous users by implement load balancing with Round Rouben strategy.
-                                        I primarily work on backend development,  ",
+                                            I primarily work on backend development,  ",
     
         'features' => [
             'It prevents parallel modifications by categorizing files as "free" or "in use" for specific users.',
@@ -108,12 +109,14 @@
 
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/notfound.png',
+        'logo' => './assets/personal-projects/dental-clinic/logo.jpg',
         'logo_background' => '#0f0f0f',
+        'logo_inner_background' => '#FFFFFF',
+    
         'project_title' => 'Dental Clinic Management',
         'project_description' => "I was part of the team that developed Back-End side Using Nest.js, Prisma, GraphQL & Docker for a Dental Clinic Management system
-                                that allows doctor to manage their patient profiles, reservations, appointments, lab orders and visualize medicines indications.
-                                It has two platforms:",
+                                    that allows doctor to manage their patient profiles, reservations, appointments, lab orders and visualize medicines indications.
+                                    It has two platforms:",
     
         // 'features' => [
         //     'It prevents parallel modifications by categorizing files as "free" or "in use" for specific users.',
@@ -123,7 +126,12 @@
         //     'Reporting features estimate booking and editing operations by file or user',
         // ],
         // 'responsibilities' => ['Led '],
-        // 'images' => ['./assets/personal-projects/source-safe/1.png'],
+        'images' => [
+            './assets/personal-projects/dental-clinic/1.png',
+            './assets/personal-projects/dental-clinic/2.png',
+            './assets/personal-projects/dental-clinic/3.png',
+            './assets/personal-projects/dental-clinic/4.png',
+        ],
         'tags' => [
             'Nest' => 'black',
             'TypeScript' => 'black',

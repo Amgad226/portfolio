@@ -1,11 +1,12 @@
 <div class="personal-project">
     <div class="personal-project-card">
         <div class="project-logo" style="background: {{ $logo_background }}">
-            <img src="{{ $logo }}" alt="Project Logo">
+            <img style="background: {{ isset($logo_inner_background) ? $logo_inner_background : '' }}"
+                src="{{ $logo }}" alt="Project Logo">
         </div>
         <div class="project-header">
             <h2 class="project-name">{{ $project_title }}</h2>
-            <button style ="background:{{$logo_background}}" class="toggle-btn">Expand</button>
+            <button style ="background:{{ $logo_background }}" class="toggle-btn">Expand</button>
         </div>
         <div class="project-content">
             <div class="project-card">
