@@ -1,18 +1,7 @@
-
 <div class="work-container" style="background-color: {{ $color }}">
     <section>
 
         <div class="work">
-            <div class= "l-container {{ $right == 1 ? 'l-container-right ' : 'l-container-left' }}">
-
-                @foreach ($technoligies as $technoligy)
-                    <div class="img-container" style="  background-color: {{ $color }}">
-                        <img class="{{ $right == 0 ? 'img-right' : '' }}" src="{{ $technoligy }}" alt="NestJS">
-                    </div>
-                @endforeach
-
-
-            </div>
 
             @if ($right == 1)
                 <div class="work-image">
@@ -51,7 +40,19 @@
 
                 </div>
             @endif
+            <div class= "l-container {{ $right == 1 ? 'l-container-right ' : 'l-container-left' }}">
+
+                @foreach ($technoligies as $technoligy)
+                    <div class="img-container" style="  background-color: {{ $color }}">
+                        <img class="{{ $right == 0 ? 'img-right' : '' }}" src="{{ $technoligy }}" alt="NestJS">
+                    </div>
+                @endforeach
+    
+    
+            </div>
         </div>
+     
+
         <br>
     </section>
 </div>
