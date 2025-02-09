@@ -5,5 +5,29 @@
         'extra_class' => 'contact-icon ' . ($extra_class ?? ''),
     ])
     @endcomponent
-    <p><a href="{{ $href }}">{{ $title }}</a></p>
+
+    @if (isset($href))
+        <p>
+            <a href="{{ $href }}">{{ $title }}</a>
+        </p>
+    @else
+        <p onclick="copy(this)">
+            {{ $title }}
+            <img id="copiedNumber" style=" width:.8rem;highet:.8rem" src="/assets/copy.png" alt="sad">
+        </p>
+    @endif
 </div>
+
+<script>
+    function copy(that) {
+        const inp = document.createElement('input');
+        document.body.appendChild(inp)
+        inp.value = that.textContent
+        inp.select();
+        document.execCommand('copy', false);
+        inp.remove();
+        const icon = document.getElementById("copiedNumber")
+        icon.src = '/assets/copied.png'
+
+    }
+</script>
