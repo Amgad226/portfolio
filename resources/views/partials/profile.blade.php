@@ -4,6 +4,7 @@
         <div class="profile-pic-container">
             <img  class= "" src="./assets/profile-pic.png" alt="Amjad Alwattar profile picture" />
         </div>
+        <br>
     <div class="profile-text">
         <p class="profile-text-p1">Hello, I'm</p>
         <h1 class="title">Amjad Alwattar</h1>

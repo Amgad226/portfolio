@@ -135,5 +135,8 @@ section {
   section{
     margin: 0;
   }
+  .title {
+    font-size: 3rem;
+  }
 }
 
