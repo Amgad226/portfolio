@@ -5,7 +5,7 @@
 </div>
 
 <div id="work-projects">
-    <h1 class="title">Work-Projects</h1>
+    <h1 class="title">Work Projects</h1>
 
 
 
