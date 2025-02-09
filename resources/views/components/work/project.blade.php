@@ -9,11 +9,13 @@
                     <p class="worked-dates">Worked: {{ $from }} - {{ $to }}</p>
                     <p class="company-role">{{ $role ?? 'role' }} at {{ $company_name ?? 'company' }}</p>
 
+                    @if($link)
                     <a style="background-color:{{ $color }}" href="{{ $link }}" target="_blank"
                         class="work-link">
-                        View Work <span>&#8599;</span>
+                        Link <span>&#8599;</span>
                     </a>
 
+                    @endif
 
                 </div>
             @endif
@@ -32,12 +34,13 @@
                     <img src="{{ $img }}" alt="{{ $company_name }} work">
                     <p class="worked-dates">Worked: {{ $from }} - {{ $to }}</p>
                     <p class="company-role">{{ $role ?? 'role' }} at {{ $company_name ?? 'company' }}</p>
-
+                    @if($link)
                     <a style="background-color:{{ $color }}" href="{{ $link }}" target="_blank"
                         class="work-link">
-                        View Work <span>&#8599;</span>
+                        Link <span>&#8599;</span>
                     </a>
 
+                    @endif
                 </div>
             @endif
             <div class= "l-container {{ $right == 1 ? 'l-container-right ' : 'l-container-left' }}">

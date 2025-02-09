@@ -20,7 +20,7 @@
         'right' => 1,
         'from' => '2022-10-01',
         'to' => '2023-10-01',
-        'link' => '',
+        'link' => 'https://copax-fms.com/',
         'technoligies' => [
             'assets/work-tech/nest.svg',
             'assets/work-tech/docker.webp',
@@ -55,7 +55,7 @@
         'right' => 0,
         'from' => '2022-10-01',
         'to' => '2023-10-01',
-        'link' => '',
+        'link' => false,
         'technoligies' => ['assets/work-tech/laravel.svg', 'assets/work-tech/mysql.png'],
     ])
         implemented and maintained robust backend solutions using Laravel.

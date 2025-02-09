@@ -65,7 +65,7 @@
             'Docker' => 'black',
             'PostgreSQL' => 'black',
         ],
-        'demo' => '#',
+        'demo' => 'https://york.amjad.cloud',
     ])
     @endcomponent
 
@@ -102,7 +102,7 @@
             'PostgreSQL' => '#E84860',
             'Google Drive Storage' => '#E84860',
         ],
-        'demo' => '#',
+        'demo' => 'https://source-safe.amjad.cloud',
     ])
     @endcomponent
 
@@ -132,7 +132,7 @@
             'PostgreSQL' => 'black',
             'GraphQL' => 'black',
         ],
-        'demo' => '#',
+        'demo' => 'https://dental-clinic.amjad.cloud',
     ])
     @endcomponent
 
@@ -157,7 +157,7 @@
             'Mongoose' => 'green',
             'Socket' => 'green',
         ],
-        'demo' => '#',
+        // 'demo' => '#',
     ])
     @endcomponent
 
@@ -186,7 +186,7 @@
             'Laravel ' => '#002F4C',
             'Mysql' => '#002F4C',
         ],
-        'demo' => '#',
+        'demo' => 'https://trip-tips.amjad.cloud',
     ])
     @endcomponent
 
@@ -209,7 +209,7 @@
             'Laravel ' => '#73446E',
             'Mysql' => '#73446E',
         ],
-        'demo' => '#',
+        // 'demo' => '#',
     ])
     @endcomponent
     <h1 class ="personal-project-title">Fullstack projects</h1>
@@ -243,7 +243,7 @@
             'jQuery' => '#4c6aaf',
             'Firebase' => '#4c6aaf',
         ],
-        'demo' => '#',
+        'demo' => 'https://tt.amjad.cloud',
     ])
     @endcomponent
 
@@ -271,7 +271,7 @@
             'UCS' => 'black',
             'A*' => 'black',
         ],
-        'demo' => '#',
+        'demo' => 'https://amgad226.github.io/sokoNumber/index.html',
     ])
     @endcomponent
 
@@ -287,7 +287,7 @@
             'JavaScript ' => 'black',
             'ThreeJs' => 'black',
         ],
-        'demo' => '#',
+        'demo' => 'https://devayham.github.io/satellite-simulation/',
     ])
     @endcomponent
 
@@ -300,7 +300,7 @@
         'tags' => [
             'C++ ' => 'black',
         ],
-        'demo' => '#',
+        // 'demo' => '#',
         'images' => [
             './assets/personal-projects/snake/1.jpg',
             './assets/personal-projects/snake/2.jpg',
