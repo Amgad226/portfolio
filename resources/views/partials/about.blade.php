@@ -9,6 +9,7 @@
             <x-about.education-cart title='Experience' content="3+ years Backend Development"></x-education-cart>
             <x-about.education-cart title='Experience' content="1+ years Devops"></x-education-cart>
             <x-about.education-cart title='Education' content="Bachelor of Science in Informatics Technology, Major in Software Engineering"></x-education-cart>
+            <x-about.education-cart title='Certificate' content="Recommendation certificate from York British Academy" link="https://yorkbritishacademy.uk/CertificatesSearch?certificateIdTerm=IT-854825"></x-education-cart>
           </div>
 
           <div class="about-text-container">
