@@ -3,15 +3,7 @@
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
-          <x-experience.container title="Frontend development">
-              <x-experience.element title="Html" />
-              <x-experience.element title="CSS" />
-              <x-experience.element title="JavaScript" />
-              <x-experience.element title="JQuery" />
-              <x-experience.element title="ThreeJs" />
-
-          </x-experience.container>
-
+      
 
           <x-experience.container title="devops">
               <div class="experience-section">
@@ -172,7 +164,8 @@
 
               <div class="experience-section">
 
-                  <x-experience.element title="Familiar with Git branching strategies,including GitFlow" />
+                  <x-experience.element title="Git branching strategies" />
+                  <x-experience.element title="GitFlow" />
               </div>
 
 
@@ -186,9 +179,9 @@
 
                   <x-experience.element title="XSS" />
                   <x-experience.element title="CSRF" />
-                  <x-experience.element title="SQL Injection," />
+                  <x-experience.element title="SQL Injection" />
                   <x-experience.element title="Directory Traversal" />
-                  <x-experience.element title="and other web vulnerability prevention techniques" />
+                  {{-- <x-experience.element title="and other web vulnerability prevention techniques" /> --}}
               </div>
 
 
@@ -214,6 +207,15 @@
 
           </x-experience.container>
 
+
+          <x-experience.container title="Frontend development">
+            <x-experience.element title="Html" />
+            <x-experience.element title="CSS" />
+            <x-experience.element title="JavaScript" />
+            <x-experience.element title="JQuery" />
+            <x-experience.element title="ThreeJs" />
+
+        </x-experience.container>
 
       </div>
 
