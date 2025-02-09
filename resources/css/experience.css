@@ -62,21 +62,43 @@ article .icon {
 
     width: 100%
 }
-.experience-element-icon{
-    width: 20%
+
+.experience-element-icon {
+    width: 20%;
+    align-self: center;
+    justify-content: center;
 }
-.experience-element-text{
+
+.experience-element-text {
     width: 80%;
-    /* height: auto; */
+    margin-bottom: 8px;
+    justify-content: center;
+    align-self: center;
     overflow: hidden;
 }
 
+.experience-element-text h3 {
+    font-size: large;
+}
 
 @media screen and (max-width: 900px) {
     .experience-details-container {
         background-color: #f2f2f2;
 
 
+    }
+
+    .experience-element-icon {
+        transform: scale(0.9);
+        /* padding-bottom: 5px; */
+    }
+
+    .experience-element {
+        padding-inline-start: 5px;
+    }
+
+    .experience-element-text h3 {
+        font-size: medium;
     }
 
     article {
