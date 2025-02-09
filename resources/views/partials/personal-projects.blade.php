@@ -85,7 +85,6 @@
             'The system prevents concurrent reservations, ensuring exclusive access.',
             'Reporting features estimate booking and editing operations by file or user',
         ],
-        'responsibilities' => ['Led '],
         'images' => [
             './assets/personal-projects/source-safe/1.png',
             './assets/personal-projects/source-safe/2.png',
@@ -118,14 +117,6 @@
                                     that allows doctor to manage their patient profiles, reservations, appointments, lab orders and visualize medicines indications.
                                     It has two platforms:",
     
-        // 'features' => [
-        //     'It prevents parallel modifications by categorizing files as "free" or "in use" for specific users.',
-        //     'Access rights are controlled through file grouping.',
-        //     'Key functionalities include check-in and check-out, allowing users to reserve, modify, and replace files.',
-        //     'The system prevents concurrent reservations, ensuring exclusive access.',
-        //     'Reporting features estimate booking and editing operations by file or user',
-        // ],
-        // 'responsibilities' => ['Led '],
         'images' => [
             './assets/personal-projects/dental-clinic/1.png',
             './assets/personal-projects/dental-clinic/2.png',
@@ -185,7 +176,6 @@
             'Administrators enjoy a centralized dashboard for overseeing all operations',
             'implemented a multi-role and permissions system for admin, manager, supervisor, and user roles, facilitated efficient data management',
         ],
-        'responsibilities' => ['Led '],
         'images' => [
             './assets/personal-projects/trip-tips/1.png',
             './assets/personal-projects/trip-tips/2.png',
@@ -238,7 +228,6 @@
             'language options.',
             'notifications',
         ],
-        'responsibilities' => ['Led '],
         'images' => [
             './assets/personal-projects/tt/1.png',
             './assets/personal-projects/tt/2.png',

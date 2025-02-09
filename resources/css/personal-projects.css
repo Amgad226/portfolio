@@ -111,21 +111,59 @@
   margin-bottom: 20px;
 }
 
+
+
 .project-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust min size */
   gap: 10px;
+  justify-content: center; /* Centers the grid content */
 }
 
-.project-images img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s;
+.image-container {
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  border: black solid 1px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
 }
 
-.project-images img:hover {
-  transform: scale(1.1);
+.image-container img {
+
+  max-height: 150px; /* Prevents images from being too large */
+  object-fit: contain;
+  border-radius: 10px;
+  /* background-color: yellow; */
+  border: rgb(255, 255, 255) solid 2px;
+
+  transition: filter 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+  filter: brightness(0.6); /* Darkens image for better contrast */
+}
+
+.hover-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .hover-icon {
+  opacity: 1;
+}
+
+.hover-icon svg {
+  width: 40px; /* Adjust icon size */
+  height: 40px;
+  stroke: white;
+  stroke-width: 2;
 }
 
 .project-link {
