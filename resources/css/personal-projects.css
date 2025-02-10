@@ -69,7 +69,7 @@
 
 
 .project-content {
-  display: block;
+  display: none;
   padding: 10px;
   border-top: 1px solid #ddd;
   transition: max-height 0.3s ease-in-out;
