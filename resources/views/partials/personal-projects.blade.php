@@ -24,10 +24,73 @@
     <h1 class ="title">Personal Projects</h1>
 
 
+    <h1 class ="personal-project-title">Shell scripts</h1>
+
+
+
+    @component('components.personal-project.personal-project', [
+        'logo' => './assets/personal-projects/shell.jpg',
+        'logo_background' => 'black',
+        'logo_inner_background' => 'black',
+        'project_title' => 'Shell code to configured sub-domains with nginx',
+        'project_description' => "This script automates the process of generating and activating Nginx configuration files for subdomains. It allows users to configure a subdomain to either:
+            Proxy requests to a local port.
+            Serve an HTML or PHP project from a specified directory.",
+    
+        'features' => [
+            'Folder Existence Check and Creation',
+            'Template-Based Nginx Configuration Generation',
+            'Support for Local Port Proxying',
+            'Support for HTML and PHP Projects',
+            'User Input Validation and Error Handling',
+            'Dynamic Subdomain Configuration Management',
+            'Automatic Configuration Activation (Optional)',
+            'Nginx Configuration Testing and Reloading',
+            'Wildcard SSL Certificate Support',
+            'Automatic SSL Certificate Integration',
+            'Dynamic Certificate Path Configuration',
+        ],
+    
+        'tags' => [
+            'sh' => 'black',
+        ],
+    ])
+    @endcomponent
+
+    @component('components.personal-project.personal-project', [
+        'logo' => './assets/personal-projects/shell.jpg',
+        'logo_background' => 'black',
+        'logo_inner_background' => 'black',
+        'project_title' => 'Shell script for managing WireGuard VPN clients',
+        'project_description' => "This script automates the process of managing WireGuard VPN clients. It provides functionalities to:
+            - Add a new VPN client with automatic key generation and IP assignment.
+            - Remove an existing VPN client and update the WireGuard configuration.
+            - List all existing VPN clients.",
+    
+        'features' => [
+            'Root Privilege Enforcement',
+            'Automatic Client Key Generation',
+            'Dynamic Client IP Allocation',
+            'WireGuard Configuration Update for New Clients',
+            'Client Configuration File Generation',
+            'QR Code Display for Easy Client Setup',
+            'Automated WireGuard Service Restart',
+            'Client Removal with Configuration Cleanup',
+            'Existing Clients Listing Functionality',
+            'User-Friendly Interactive Menu',
+        ],
+    
+        'tags' => [
+            'sh' => 'black',
+        ],
+    ])
+    @endcomponent
+
+
     <!-- Project 2 -->
     <h1 class ="personal-project-title">Backend projects</h1>
 
-   
+
 
     @component('components.personal-project.personal-project', [
         'logo' => './assets/personal-projects/source-safe/logo.png',
@@ -35,7 +98,7 @@
         'logo_inner_background' => '#FFFFFF',
         'project_title' => 'Source-Safe',
         'project_description' => "Source Safe’ is a web-based system for managing collaborative file work | Source Safe scales to support up to 100 simultaneous users by implement load balancing with Round Rouben strategy.
-                                            I primarily work on backend development,  ",
+                                                            I primarily work on backend development,  ",
     
         'features' => [
             'It prevents parallel modifications by categorizing files as "free" or "in use" for specific users.',
