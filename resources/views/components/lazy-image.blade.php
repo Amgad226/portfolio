@@ -1,4 +1,4 @@
-@props(['src'=>"", 'placeholder' =>  asset('assets/placeholder.svg') , 'alt' => '', 'class' => '' , 'id'=>'','style'=>''])
+@props(['src'=>"", 'placeholder' => null , 'alt' => '', 'class' => '' , 'id'=>'','style'=>''])
 
 <img 
     src="{{ $placeholder ?? $src }}" 
@@ -9,7 +9,7 @@
     id="{{$id}}"
     style="{{$style}}"
 />
-
+{{-- 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const lazyImages = document.querySelectorAll("img.lazy");
@@ -25,4 +25,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-</script>
+</script> --}}
