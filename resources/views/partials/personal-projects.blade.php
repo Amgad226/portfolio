@@ -27,48 +27,7 @@
     <!-- Project 2 -->
     <h1 class ="personal-project-title">Backend projects</h1>
 
-    @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/york/logo.webp',
-        'logo_background' => 'black',
-        'project_title' => 'York-British-Academy',
-        'project_description' => "As a backend developer and DevOps lead, I contributed to a comprehensive platform for 
-                                                                            ‘York-British-Academy’ designed to centralize services for trainees and trainers, eliminating reliance on multiple platforms.",
-    
-        'features' => [
-            'Training Sessions: Video conferencing, session settings, screen sharing, collaborative whiteboard, session recording, break management, online assignments with anti-fraud measures, and reporting system.',
-            'Sessions Management: Viewing and managing recorded sessions, scheduling, session statistics, and session reports.',
-            'Certificate Generator: Creating and managing certificate templates, setting templates for courses, generating secure certificates, and offering NFT-based authenticity.',
-        ],
-        'responsibilities' => [
-            'Led the backend team, ensuring efficient services and conducting code reviews.',
-            'Deployed the entire project on a Windows server using Docker and GitLab CI/CD pipelines.',
-            'Developed microservices and integrated communication between system versions.',
-            'Dockerized various components (Node.js, Nest.js, Next.js, Laravel, and Flutter web app) and deployed them to the server.',
-            'Built CI/CD pipelines for continuous integration and deployment.',
-        ],
-        'images' => [
-            './assets/personal-projects/york/room.jpg',
-            './assets/personal-projects/york/certificate.jpg',
-            './assets/personal-projects/york/wightboard.jpg',
-            './assets/personal-projects/york/cicd.jpg',
-        ],
-        'tags' => [
-            'Nest' => 'black',
-            'Laravel' => 'black',
-            'Nginx' => 'black',
-            'Mysql' => 'black',
-            'PostgreSQL' => 'black',
-            'WebRTC' => 'black',
-            'Socket' => 'black',
-            'Redis' => 'black',
-            'Prisma' => 'black',
-            'Docker' => 'black',
-            'PostgreSQL' => 'black',
-        ],
-        'demo' => 'https://york.amjad.cloud',
-    ])
-    @endcomponent
-
+   
 
     @component('components.personal-project.personal-project', [
         'logo' => './assets/personal-projects/source-safe/logo.png',
