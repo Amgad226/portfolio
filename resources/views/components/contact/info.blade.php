@@ -13,7 +13,7 @@
     @else
         <p onclick="copy(this)">
             {{ $title }}
-            <img id="copiedNumber" style=" width:.8rem;highet:.8rem" src="/assets/copy.png" alt="sad">
+            <x-lazy-image  id="copiedNumber" style=" width:.8rem;highet:.8rem" src="/assets/copy.png" alt="sad" />
         </p>
     @endif
 </div>

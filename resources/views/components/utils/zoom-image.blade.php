@@ -1,5 +1,5 @@
 <div style="display: none" id="div-zoom" onclick="hideZoomF()">
-    <img  id="zoom" alt="zoom img">
+    <x-lazy-image  id="zoom" alt="zoom img"/>
 
 </div>
 <style>

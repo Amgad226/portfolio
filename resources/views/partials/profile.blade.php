@@ -2,7 +2,7 @@
 <section id="profile">
 
         <div class="profile-pic-container">
-            <img  class= "" src="./assets/profile-pic.png" alt="Amjad Alwattar profile picture" />
+            <x-lazy-image   class="" src="./assets/profile-pic.png"/>
         </div>
         <br>
     <div class="profile-text">

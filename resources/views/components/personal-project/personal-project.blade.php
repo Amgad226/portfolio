@@ -1,8 +1,8 @@
 <div class="personal-project">
     <div class="personal-project-card">
         <div class="project-logo" style="background: {{ $logo_background }}">
-            <img style="background: {{ isset($logo_inner_background) ? $logo_inner_background : '' }}"
-                src="{{ $logo }}" alt="Project Logo">
+            <x-lazy-image style="background: {{ isset($logo_inner_background) ? $logo_inner_background : '' }}"
+                src="{{ $logo }}" alt="Project Logo"/>
         </div>
         <div class="project-header">
             <div class="project-name-section">
@@ -46,7 +46,7 @@
                         @foreach ($images as $image)
                             <div style="background:{{ $logo_background }}" class="image-container"
                                 onclick="zoom(this.querySelector('img'))">
-                                <img src="{{ $image }}">
+                                <x-lazy-image src="{{ $image }}"/>
                                 <div class="hover-icon">
                                     <!-- SVG Zoom Icon -->
                                     <svg width="50" height="50" viewBox="0 0 24 24" fill="none"

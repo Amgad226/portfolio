@@ -1,7 +1,7 @@
 <div id="toast">
     <div id="toast-img">
 
-        <img id="toast-img-src" src="">
+        <x-lazy-image id="toast-img-src" src=""/>
     </div>
     <div id="toast-desc">A notification message..</div>
 </div>

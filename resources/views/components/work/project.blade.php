@@ -5,7 +5,7 @@
 
             @if ($right == 1)
                 <div class="work-image">
-                    <img src="{{ $img }}" alt="{{ $company_name }} work">
+                    <x-lazy-image src="{{ $img }}" alt="{{ $company_name }} work"/>
                     <p class="worked-dates">Worked: {{ $from }} - {{ $to }}</p>
                     <p class="company-role">{{ $role ?? 'role' }} at {{ $company_name ?? 'company' }}</p>
 
@@ -31,7 +31,7 @@
 
             @if ($right != 1)
                 <div class="work-image">
-                    <img src="{{ $img }}" alt="{{ $company_name }} work">
+                    <x-lazy-image src="{{ $img }}" alt="{{ $company_name }} work"/>
                     <p class="worked-dates">Worked: {{ $from }} - {{ $to }}</p>
                     <p class="company-role">{{ $role ?? 'role' }} at {{ $company_name ?? 'company' }}</p>
                     @if($link)
@@ -47,7 +47,7 @@
 
                 @foreach ($technoligies as $technoligy)
                     <div class="img-container" style="  background-color: {{ $color }}">
-                        <img class="{{ $right == 0 ? 'img-right' : '' }}" src="{{ $technoligy }}" alt="NestJS">
+                        <x-lazy-image class="{{ $right == 0 ? 'img-right' : '' }}" src="{{ $technoligy }}" alt="NestJS"/>
                     </div>
                 @endforeach
     
