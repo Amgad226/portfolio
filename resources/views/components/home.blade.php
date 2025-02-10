@@ -14,6 +14,8 @@
     @include('partials.work-projects')
 </x-section>
 
+@include('partials.freelance-projects')
+
 <x-section id="personal-projects">
     @include('partials.personal-projects')
 </x-section>

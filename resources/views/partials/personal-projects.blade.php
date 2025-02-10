@@ -107,59 +107,8 @@
     @endcomponent
 
 
-    @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/dental-clinic/logo.jpg',
-        'logo_background' => '#0f0f0f',
-        'logo_inner_background' => '#FFFFFF',
-    
-        'project_title' => 'Dental Clinic Management',
-        'project_description' => "I was part of the team that developed Back-End side Using Nest.js, Prisma, GraphQL & Docker for a Dental Clinic Management system
-                                    that allows doctor to manage their patient profiles, reservations, appointments, lab orders and visualize medicines indications.
-                                    It has two platforms:",
-    
-        'images' => [
-            './assets/personal-projects/dental-clinic/1.png',
-            './assets/personal-projects/dental-clinic/2.png',
-            './assets/personal-projects/dental-clinic/3.png',
-            './assets/personal-projects/dental-clinic/4.png',
-        ],
-        'tags' => [
-            'Nest' => 'black',
-            'TypeScript' => 'black',
-            'Prisma' => 'black',
-            'PostgreSQL' => 'black',
-            'Docker' => 'black',
-            'PostgreSQL' => 'black',
-            'GraphQL' => 'black',
-        ],
-        'demo' => 'https://dental-clinic.amjad.cloud',
-    ])
-    @endcomponent
 
 
-    @component('components.personal-project.personal-project', [
-        'logo' => './assets/notfound.png',
-        'logo_background' => 'green',
-        'project_title' => 'Ticket Management System',
-        'project_description' =>
-            'Worked on a comprehensive ticket management system that includes multiple roles (admin, user, technician, manager) ',
-    
-        'features' => [
-            'Authentication and role base access control.',
-            'Ticket Management: Developed functionalities for creating, updating, and managing tickets, with a comment feature for detailed ticket discussions ',
-            'Role-Based Conversations: Enabled real-time conversations between admin and users, and between managers and users, to track ticket statuses and resolutions .',
-        ],
-        'images' => [],
-        'tags' => [
-            'Node.js ' => 'green',
-            'Express' => 'green',
-            'MongoDB' => 'green',
-            'Mongoose' => 'green',
-            'Socket' => 'green',
-        ],
-        // 'demo' => '#',
-    ])
-    @endcomponent
 
     @component('components.personal-project.personal-project', [
         'logo' => './assets/personal-projects/trip-tips/logo.png',

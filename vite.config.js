@@ -13,6 +13,8 @@ export default defineConfig({
                 'resources/css/experience.css', 
                 'resources/css/footer.css', 
                 'resources/css/work-projects.css', 
+                'resources/css/freelance-projects.css', 
+                
                 'resources/js/app.js'
             ], 
             refresh: true,
