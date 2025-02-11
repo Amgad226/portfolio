@@ -1,4 +1,5 @@
-<div style="display: none" id="div-zoom" onclick="hideZoomF()">
+{{-- this componenet is the zoomed image that shown after click on image that have zoom behaveor --}}
+<div id="div-zoom" onclick="hideZoomF()">
     <x-lazy-image  id="zoom" alt="zoom img"/>
 
 </div>
@@ -23,7 +24,7 @@
     }
     
     #zoom:hover {
-        transform: scale(1.05);
+        transform: scale(1.2);
     }
     
     </style>

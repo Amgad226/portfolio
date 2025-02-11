@@ -14,7 +14,7 @@
     @if (config('app.env') === 'production')
         {{-- <x-overlay /> --}}
     @endif
-    <x-utils.zoom-image />
+    <x-utils.zoom-image-component />
     <x-nav-bar />
     <x-home />
     <x-footer />
