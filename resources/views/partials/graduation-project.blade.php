@@ -36,10 +36,11 @@
                     </p>
                     <div class="freelance-project-images">
 
-                        <x-utils.image-zoom src="./assets/personal-projects/york/room_compressed.webp" />
-                        <x-utils.image-zoom src="./assets/personal-projects/york/certificate_compressed.webp" />
-                        <x-utils.image-zoom src="./assets/personal-projects/york/wightboard_compressed.webp" />
-                        <x-utils.image-zoom src="./assets/personal-projects/york/cicd_compressed.webp" />
+                        <x-utils.image-zoom style="background:rgb(222, 222, 222)" src="./assets/personal-projects/york/room_compressed.webp" />
+                        <x-utils.image-zoom style="background:rgb(222, 222, 222)" src="./assets/personal-projects/york/certificate_compressed.webp" />
+                        <x-utils.image-zoom style="background:rgb(222, 222, 222)" src="./assets/personal-projects/york/wightboard_compressed.webp" />
+                        <x-utils.image-zoom style="background:rgb(222, 222, 222)" src="./assets/personal-projects/york/cicd_compressed.webp" />
+                        <x-utils.image-zoom style="background:rgb(222, 222, 222)" src="./assets/personal-projects/york/york-certificate.jpg" />
 
 
 
