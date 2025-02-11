@@ -2,7 +2,7 @@
 
 <section>
 
-    <div id="freelance-projects">
+    <div id="graduation-project">
         <div class="projects">
             <h1>My Graduation Project</h1>
 

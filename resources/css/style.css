@@ -84,7 +84,9 @@ section {
   min-height: fit-content;
 }
 
-
+.nav-links{
+  font-size:22px;
+}
 /* ICONS */
 
 .icon {

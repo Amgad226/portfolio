@@ -2,15 +2,7 @@
     <!-- Simplicity is an acquired taste. - Katharine Gerould -->
     <nav id="desktop-nav">
         <div class="logo">Amjad Alwattar</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#work-projects">Work Projects</a></li>
-                <li><a href="#personal-projects">Personal Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+        <x-nav-links/>
     </nav>
 </div>
 
