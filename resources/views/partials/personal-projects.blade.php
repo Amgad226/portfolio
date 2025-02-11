@@ -93,7 +93,7 @@
 
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/source-safe/logo_compressed.webp',
+        'logo' => './assets/personal-projects/source-safe/logo.png',
         'logo_background' => '#F14A5C',
         'logo_inner_background' => '#FFFFFF',
         'project_title' => 'Source-Safe',
