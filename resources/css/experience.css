@@ -81,6 +81,13 @@ article .icon {
     font-size: large;
 }
 
+.e-about-containers {
+    gap: 2rem;
+    display: flex;
+
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
 @media screen and (max-width: 900px) {
     .experience-details-container {
         background-color: #f2f2f2;

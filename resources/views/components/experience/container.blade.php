@@ -1,4 +1,4 @@
-      <div class="about-containers">
+      <div class="e-about-containers">
           <div class="experience-detail-container">
             <h2 class="experience-sub-title">{{$title}}</h2>
             <div class="article-container">
