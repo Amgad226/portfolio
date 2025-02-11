@@ -29,7 +29,7 @@
 
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/shell.jpg',
+        'logo' => './assets/personal-projects/shell_compressed.webp',
         'logo_background' => 'black',
         'logo_inner_background' => 'black',
         'project_title' => 'Shell code to configured sub-domains with nginx',
@@ -58,7 +58,7 @@
     @endcomponent
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/shell.jpg',
+        'logo' => './assets/personal-projects/shell_compressed.webp',
         'logo_background' => 'black',
         'logo_inner_background' => 'black',
         'project_title' => 'Shell script for managing WireGuard VPN clients',
@@ -93,7 +93,7 @@
 
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/source-safe/logo.png',
+        'logo' => './assets/personal-projects/source-safe/logo_compressed.webp',
         'logo_background' => '#F14A5C',
         'logo_inner_background' => '#FFFFFF',
         'project_title' => 'Source-Safe',
@@ -108,10 +108,10 @@
             'Reporting features estimate booking and editing operations by file or user',
         ],
         'images' => [
-            './assets/personal-projects/source-safe/1.png',
-            './assets/personal-projects/source-safe/2.png',
-            './assets/personal-projects/source-safe/3.png',
-            './assets/personal-projects/source-safe/4.png',
+            './assets/personal-projects/source-safe/1_compressed.webp',
+            './assets/personal-projects/source-safe/2_compressed.webp',
+            './assets/personal-projects/source-safe/3_compressed.webp',
+            './assets/personal-projects/source-safe/4_compressed.webp',
         ],
         'tags' => [
             'Nest' => '#E84860',
@@ -133,7 +133,7 @@
 
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/trip-tips/logo.png',
+        'logo' => './assets/personal-projects/trip-tips/logo_compressed.webp',
         'logo_background' => '#002F4C',
         'project_title' => 'Trip-Tips',
         'project_description' =>
@@ -148,10 +148,10 @@
             'implemented a multi-role and permissions system for admin, manager, supervisor, and user roles, facilitated efficient data management',
         ],
         'images' => [
-            './assets/personal-projects/trip-tips/1.png',
-            './assets/personal-projects/trip-tips/2.png',
-            './assets/personal-projects/trip-tips/3.png',
-            './assets/personal-projects/trip-tips/4.png',
+            './assets/personal-projects/trip-tips/1_compressed.webp',
+            './assets/personal-projects/trip-tips/2_compressed.webp',
+            './assets/personal-projects/trip-tips/3_compressed.webp',
+            './assets/personal-projects/trip-tips/4_compressed.webp',
         ],
         'tags' => [
             'Laravel ' => '#002F4C',
@@ -164,17 +164,17 @@
 
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/x-buyer/logo.jpg',
+        'logo' => './assets/personal-projects/x-buyer/logo_compressed.webp',
         'logo_background' => '#73446E',
         'project_title' => 'X-Buyer',
         'project_description' =>
             '"X-Buyer" which is an online store of a flutter app that sells products which are close to expiration and applies discounts on them.',
     
         'images' => [
-            './assets/personal-projects/x-buyer/1.jpg',
-            './assets/personal-projects/x-buyer/2.jpg',
-            './assets/personal-projects/x-buyer/3.jpg',
-            './assets/personal-projects/x-buyer/4.jpg',
+            './assets/personal-projects/x-buyer/1_compressed.webp',
+            './assets/personal-projects/x-buyer/2_compressed.webp',
+            './assets/personal-projects/x-buyer/3_compressed.webp',
+            './assets/personal-projects/x-buyer/4_compressed.webp',
         ],
         'tags' => [
             'Laravel ' => '#73446E',
@@ -200,10 +200,10 @@
             'notifications',
         ],
         'images' => [
-            './assets/personal-projects/tt/1.png',
-            './assets/personal-projects/tt/2.png',
-            './assets/personal-projects/tt/3.png',
-            './assets/personal-projects/tt/4.png',
+            './assets/personal-projects/tt/1_compressed.webp',
+            './assets/personal-projects/tt/2_compressed.webp',
+            './assets/personal-projects/tt/3_compressed.webp',
+            './assets/personal-projects/tt/4_compressed.webp',
         ],
         'tags' => [
             'Laravel ' => '#4c6aaf',
@@ -221,17 +221,17 @@
     <h1 class ="personal-project-title">Games and Simulation Projects</h1>
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/soku-number/logo.jpg',
+        'logo' => './assets/personal-projects/soku-number/logo_compressed.webp',
         'logo_background' => 'black',
         'project_title' => 'Soko Number Game',
         'project_description' =>
             '"Soko Number" is a fresh and captivating puzzle game that challenges your intelligence and logical reasoning skills. Apart from the playing mode, the game can also be tackled with renowned algorithms such as DFS, BFS, UCS, and A*.',
     
         'images' => [
-            './assets/personal-projects/soku-number/1.png',
-            './assets/personal-projects/soku-number/2.png',
-            './assets/personal-projects/soku-number/3.png',
-            './assets/personal-projects/soku-number/4.png',
+            './assets/personal-projects/soku-number/1_compressed.webp',
+            './assets/personal-projects/soku-number/2_compressed.webp',
+            './assets/personal-projects/soku-number/3_compressed.webp',
+            './assets/personal-projects/soku-number/4_compressed.webp',
         ],
         'tags' => [
             'HTML ' => 'black',
@@ -248,12 +248,12 @@
 
 
     @component('components.personal-project.personal-project', [
-        'logo' => './assets/personal-projects/satellite/logo.png',
+        'logo' => './assets/personal-projects/satellite/logo_compressed.webp',
         'logo_background' => 'black',
         'project_title' => 'Simulation of the motion of a satellite',
         'project_description' => 'Developed a simulation project for the movement of the satellites around the Earth',
     
-        'images' => ['./assets/personal-projects/satellite/1.png', './assets/personal-projects/satellite/2.png'],
+        'images' => ['./assets/personal-projects/satellite/1_compressed.webp', './assets/personal-projects/satellite/2_compressed.webp'],
         'tags' => [
             'JavaScript ' => 'black',
             'ThreeJs' => 'black',
@@ -273,9 +273,9 @@
         ],
         // 'demo' => '#',
         'images' => [
-            './assets/personal-projects/snake/1.jpg',
-            './assets/personal-projects/snake/2.jpg',
-            './assets/personal-projects/snake/3.jpg',
+            './assets/personal-projects/snake/1_compressed.webp',
+            './assets/personal-projects/snake/2_compressed.webp',
+            './assets/personal-projects/snake/3_compressed.webp',
         ],
     ])
     @endcomponent

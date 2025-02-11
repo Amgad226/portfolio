@@ -246,7 +246,7 @@
 
 .features-list li,
 .responsibilities-list li {
-  background: url('https://cdn-icons-png.flaticon.com/16/845/845646.png') no-repeat left center;
+  background: url('../../public/assets/checkmark.png') no-repeat left center;
   background-size: 16px;
   padding-left: 25px;
   margin-bottom: 8px;

@@ -18,10 +18,10 @@
                         platforms:</p>
                     <div class="freelance-project-images">
 
-                        <x-utils.image-zoom src="./assets/personal-projects/dental-clinic/1.png"  />
-                        <x-utils.image-zoom src="./assets/personal-projects/dental-clinic/2.png"  />
-                        <x-utils.image-zoom src="./assets/personal-projects/dental-clinic/3.png"  />
-                        <x-utils.image-zoom src="./assets/personal-projects/dental-clinic/4.png"  />
+                        <x-utils.image-zoom src="./assets/personal-projects/dental-clinic/1_compressed.webp"  />
+                        <x-utils.image-zoom src="./assets/personal-projects/dental-clinic/2_compressed.webp"  />
+                        <x-utils.image-zoom src="./assets/personal-projects/dental-clinic/3_compressed.webp"  />
+                        <x-utils.image-zoom src="./assets/personal-projects/dental-clinic/4_compressed.webp"  />
 
            
                     </div>

@@ -2,7 +2,7 @@
 <section id="profile">
 
         <div class="profile-pic-container">
-            <x-lazy-image   class="" src="./assets/profile-pic.png"/>
+            <x-lazy-image   class="" src="./assets/profile-pic_compressed.webp"/>
         </div>
         <br>
     <div class="profile-text">
@@ -19,15 +19,17 @@
             </x-button>
         </div>
         <div id="socials-container">
-            <div onclick="location.href='https://linkedin.com/'">
+            <div onclick="location.href='https://linkedin.com/in/amjad-alwattar'">
                 @component('components.icon', [
                     'img' => './assets/linkedin.png',
                 ])
+            {{-- <a href='https://linkedin.com/in/amjad-alwattar'></a> --}}
+
                 @endcomponent
 
             </div>
 
-            <div onclick="location.href='https://github.com/'">
+            <div onclick="location.href='https://github.com/amgad226'">
                 @component('components.icon', [
                     'img' => './assets/github.png',
                 ])

@@ -16,7 +16,7 @@
         'company_name' => 'Scendinivia-tech',
         'role'=>'backend developer',
         'current_job'=>true,
-        'img' => 'assets/scendinavia-tech.png',
+        'img' => 'assets/scendinavia-tech_compressed.webp',
         'right' => 1,
         'from' => '2022-10-01',
         'to' => '2023-10-01',

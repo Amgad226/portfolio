@@ -36,10 +36,10 @@
                     </p>
                     <div class="freelance-project-images">
 
-                        <x-utils.image-zoom src="./assets/personal-projects/york/room.jpg" />
-                        <x-utils.image-zoom src="./assets/personal-projects/york/certificate.jpg" />
-                        <x-utils.image-zoom src="./assets/personal-projects/york/wightboard.jpg" />
-                        <x-utils.image-zoom src="./assets/personal-projects/york/cicd.jpg" />
+                        <x-utils.image-zoom src="./assets/personal-projects/york/room_compressed.webp" />
+                        <x-utils.image-zoom src="./assets/personal-projects/york/certificate_compressed.webp" />
+                        <x-utils.image-zoom src="./assets/personal-projects/york/wightboard_compressed.webp" />
+                        <x-utils.image-zoom src="./assets/personal-projects/york/cicd_compressed.webp" />
 
 
 
