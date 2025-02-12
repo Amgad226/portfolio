@@ -141,7 +141,7 @@
 @media (max-width: 1024px) {
     .freelance-project {
         flex-direction: column;
-        text-align: center;
+        /* text-align: center; */
     }
 
     /* .freelance-project:nth-child(odd) { */
