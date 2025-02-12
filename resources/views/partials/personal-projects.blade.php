@@ -32,7 +32,7 @@
         'logo' => './assets/personal-projects/shell_compressed.webp',
         'logo_background' => 'black',
         'logo_inner_background' => 'black',
-        'project_title' => 'Shell code to configured sub-domains with nginx',
+        'project_title' => 'Shell script to configured sub-domains with nginx',
         'project_description' => "This script automates the process of generating and activating Nginx configuration files for subdomains. It allows users to configure a subdomain to either:
             Proxy requests to a local port.
             Serve an HTML or PHP project from a specified directory.",

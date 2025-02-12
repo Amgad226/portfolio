@@ -1,0 +1,155 @@
+/* General Section Styling */
+#graduation-project {
+    padding: 60px 5%;
+    background-color: #F8F9FA;
+    /* transform: scale(0.9); */
+
+}
+
+#graduation-project h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+/* Project Container */
+.graduation-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Logo */
+.graduation-project-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graduation-project-logo img {
+    max-width: 200px;
+    border-radius: 8px;
+    border-radius: 50%;
+    padding: 20px;
+    background: black;
+}
+
+/* Project Text Container */
+.graduation-project-text {
+    flex: 2;
+}
+
+/* Project Card */
+.project-card {
+    background: #ffffff;
+    /* padding: 252px; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); */
+}
+
+.project-card h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.project-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.project-card li {
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 1rem;
+}
+
+.project-card strong {
+    color: #222;
+}
+
+/* Project Images */
+.graduation-project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.graduation-project-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.graduation-project-images img:hover {
+    transform: scale(1.05);
+}
+
+/* View Project Link */
+.graduation-project-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #2E796B;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.graduation-project-link:hover {
+    background: #1e4e45;
+    color: white;
+  text-decoration: none;
+    
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .graduation-project {
+        flex-direction: column;
+        /* text-align: center; */
+    }
+
+    .graduation-project-images {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #graduation-project {
+        padding: 0;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .frelance-project-link {
+        padding: 10px 16px;
+        font-size: 1rem;
+    }
+}

@@ -14,6 +14,8 @@ export default defineConfig({
                 'resources/css/footer.css', 
                 'resources/css/work-projects.css', 
                 'resources/css/freelance-projects.css', 
+                'resources/css/graduation-project.css', 
+                
                 
                 'resources/js/app.js'
             ], 
