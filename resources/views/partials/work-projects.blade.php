@@ -18,8 +18,8 @@
         'current_job'=>true,
         'img' => 'assets/scendinavia-tech_compressed.webp',
         'right' => 1,
-        'from' => '2022-10-01',
-        'to' => '2023-10-01',
+        'from' => '2022-09-01',
+        'to' => 'now',
         'link' => 'https://copax-fms.com/',
         'technoligies' => [
             'assets/work-tech/nest.svg',
@@ -53,8 +53,8 @@
         'company_name' => 'Pharmaway',
         'img' => 'assets/pharmaway.png',
         'right' => 0,
-        'from' => '2022-10-01',
-        'to' => '2023-10-01',
+        'from' => '2023-6-01',
+        'to' => '2024-03-01',
         'link' => false,
         'technoligies' => ['assets/work-tech/laravel.svg', 'assets/work-tech/mysql.png'],
     ])
