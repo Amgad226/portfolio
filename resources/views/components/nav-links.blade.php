@@ -7,5 +7,8 @@
         <li><a href="#graduation-project">Graduation Project</a></li>
         <li><a href="#work-projects">Work Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        @if(session()->has('authenticated'))
+        <li><a href="/dashboard">dashboard</a></li>
+        @endif
     </ul>
 </div>

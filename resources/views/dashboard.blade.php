@@ -77,7 +77,9 @@
 <body>
 
 <div class="container">
+    <li><a href="/">home</a></li>
     <h1>Visitor Logs</h1>
+
     <div class="table-container">
         <table>
             <thead>
