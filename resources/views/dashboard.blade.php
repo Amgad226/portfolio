@@ -3,56 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
             text-align: center;
         }
-        h1 {
-            color: #333;
-        }
+        
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             overflow-x: auto;
         }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .nav-bar a {
+            background: black;
+            margin: 5px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background: #555;
+        }
+
+        /* Table Styles */
         .table-container {
             overflow-x: auto;
+            border-radius: 10px;
         }
+
         table {
             width: 100%;
             min-width: 600px;
             border-collapse: collapse;
             background: white;
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
         }
+
         th, td {
             padding: 12px;
             border: 1px solid #ddd;
             text-align: left;
-            white-space: nowrap;
         }
+
         th {
-            background-color: black;
+            background-color: #333;
             color: white;
+            text-transform: uppercase;
         }
+
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
-                padding: 10px;
+                padding: 15px;
             }
             h1 {
                 font-size: 1.5em;
@@ -61,49 +100,44 @@
                 font-size: 14px;
             }
             th, td {
-                padding: 8px;
+                padding: 10px;
             }
         }
+
         @media (max-width: 480px) {
+            .nav-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
             table {
                 font-size: 12px;
             }
             th, td {
-                padding: 6px;
-                fl
+                padding: 8px;
             }
-
         }
-
-        .navv{
-                display: flex;
-              
-
-            }
-
-        .navv a{
-                display: flex;
-                padding: 10px;
-                margin: 0px 5px;
-                background: black;
-                color: #f9f9f9;
-                border-radius: 10px;
-                text-decoration: none;
-                
-                
-            }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="navv" >
-        
-        <a href="/">home</a>
-        <a href="/logout">logout</a>
+    <!-- Navigation -->
+    <div class="nav-bar">
+        <a href="/">Home</a>
+        <a href="/logout">Logout</a>
     </div>
+
+    <h2>Visitor Statistics</h2>
+    <p>Here are the statistics of visitor logs:</p>
+
+    @foreach($group as $a)
+    <p><strong>IP:</strong> {{$a["ip_address"]}} | <strong>Total Visits:</strong> {{$a["total"]}}</p>
+    @endforeach
+
     <h1>Visitor Logs</h1>
 
+    <!-- Table -->
     <div class="table-container">
         <table>
             <thead>
