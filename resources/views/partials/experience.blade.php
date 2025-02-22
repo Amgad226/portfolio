@@ -66,7 +66,7 @@
 
                   <x-experience.element title="MySQL" />
                   <x-experience.element title="Postgres" />
-                  <x-experience.element title="MogoDB" />
+                  <x-experience.element title="MongoDB" />
                   <x-experience.element title="Redis" />
               </div>
               <div class="experience-section">
@@ -120,7 +120,7 @@
               <div class="experience-section">
 
                   <x-experience.element title="jQuery" />
-                  <x-experience.element title="socker.io" />
+                  <x-experience.element title="socket.io" />
                   <x-experience.element title="apollo" />
                   <x-experience.element title="puppeteer" />
               </div>
