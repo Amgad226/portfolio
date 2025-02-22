@@ -20,9 +20,10 @@
 
 <script>
     function copy(that) {
+       
         const inp = document.createElement('input');
         document.body.appendChild(inp)
-        inp.value = that.textContent
+        inp.value = that.childNodes[0].textContent.trim()
         inp.select();
         document.execCommand('copy', false);
         inp.remove();
