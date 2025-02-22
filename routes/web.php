@@ -21,7 +21,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get("/dashboard_page_to_access_admin_permissions", function(){
     $visitors= Visitor::orderBy("id","desc")->get();
-    $group = Visitor::select("ip_address", DB::raw('count(*) as total'))->orderBy("id","desc")->groupBy("ip")->get();
+    $group = Visitor::select("ip_address", DB::raw('count(*) as total'))->orderBy("id","desc")->groupBy("ip_address")->get();
     
     return view('dashboard',compact('visitors',"group"));
 
