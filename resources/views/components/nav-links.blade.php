@@ -8,7 +8,7 @@
         <li><a href="#work-projects">Work Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         @if(session()->has('authenticated'))
-        <li><a href="/dashboard">dashboard</a></li>
+        <li><a href="/dashboard_page_to_access_admin_permissions">dashboard</a></li>
         @endif
     </ul>
 </div>

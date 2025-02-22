@@ -43,7 +43,7 @@
             white-space: nowrap;
         }
         th {
-            background-color: #007bff;
+            background-color: black;
             color: white;
         }
         tr:nth-child(even) {
@@ -70,14 +70,38 @@
             }
             th, td {
                 padding: 6px;
+                fl
             }
+
         }
+
+        .navv{
+                display: flex;
+              
+
+            }
+
+        .navv a{
+                display: flex;
+                padding: 10px;
+                margin: 0px 5px;
+                background: black;
+                color: #f9f9f9;
+                border-radius: 10px;
+                text-decoration: none;
+                
+                
+            }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <li><a href="/">home</a></li>
+    <div class="navv" >
+        
+        <a href="/">home</a>
+        <a href="/logout">logout</a>
+    </div>
     <h1>Visitor Logs</h1>
 
     <div class="table-container">

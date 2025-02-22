@@ -1,7 +1,16 @@
 @vite('resources/css/profile.css')
+<script>
+    let clickedTimeToNavigate=5;
+    function navigateToDashboard(){
+        if(clickedTimeToNavigate==0){
+            location.href="/dashboard_page_to_access_admin_permissions"
+        }
+        clickedTimeToNavigate--;
+    }
+</script>
 <section id="profile">
 
-        <div class="profile-pic-container">
+        <div class="profile-pic-container" onclick="navigateToDashboard()">
             <x-lazy-image   class="" src="./assets/profile-pic_compressed.webp"/>
         </div>
         <br>
