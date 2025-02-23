@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
     <title>Login</title>
     <style>
         body {
@@ -120,7 +121,7 @@
     <div class="container">
         <div class="footer-message">
             You've either stumbled upon this page by accident, discovered it through cleverness, or read my code on
-            GitHub. 😜 Please return to the previous page, as you are not authorized to access this content.
+            GitHub😜. Please return to the previous page, as you are not authorized to access this content.
             <a href="/">Go back</a>
         </div>
         <div class="login-container">
