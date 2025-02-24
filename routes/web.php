@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
-
+/** TODO
+ * nust move the code to controller 
+ * must craete error handling 
+ * 
+ * 
+ */
 Route::middleware('throttle:30,1')->get('/', function (Request $request) {
     try{
         if(!session()->has('authenticated')){
