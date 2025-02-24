@@ -52,6 +52,11 @@ return [
 
     'channels' => [
 
+        'error_web' => [
+        'driver' => 'single',
+        'path' => storage_path('logs/error_web.log'),
+        'level' => 'alert',
+    ],
         'stack' => [
             'driver' => 'stack',
             'channels' => explode(',', env('LOG_STACK', 'single')),

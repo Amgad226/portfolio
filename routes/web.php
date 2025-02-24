@@ -4,13 +4,20 @@ use App\Http\Controllers\AuthController;
 use App\Models\Visitor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('throttle:30,1')->get('/', function (Request $request) {
-    if(!session()->has('authenticated')){
-        Visitor::create(['ip_address'=>$request->ip(),"user_agent"=>$request->userAgent(),"session_id"=>session()->id()]);
+    try{
+        if(!session()->has('authenticated')){
+            Visitor::create(['ip_address'=>$request->ip(),"user_agent"=>$request->userAgent(),"session_id"=>23]);
+        }
+        throw new Error("test throw error in server");
+    }catch(Error $e){
+        Log::channel('error_web')->alert($e->getMessage());
+    }finally{
+        return view('app');
     }
-    return view('app');
 })->name("app");
 
 Route::get('/login_page_to_access_admin_permissions', [AuthController::class, 'showLoginForm'])->name('login');
