@@ -29,16 +29,15 @@
             'assets/work-tech/runner.svg',
         ],
     ])
-        Contributed to the development of the Copax fleet management system, optimizing vehicle and driver performance
+        Contributed to the development of the <strong class="bold-string">Copax fleet management system</strong>, optimizing vehicle and driver performance
         through telematics
         technology.
-        Implemented key features including real-time GPS tracking, fuel management, and performance monitoring.
-        Developed and maintained backend services using TypeScript, NestJS in a microservices architecture.
+        Implemented key features including <strong class="bold-string">real-time GPS tracking, fuel management, and performance monitoring </strong>.
+        Developed and maintained backend services using TypeScript, NestJS in a <strong class="bold-string">microservices architecture.</strong >
         Worked collaboratively in an agile environment using ClickUp for project management and task tracking.
         Focused on building scalable and high-performance backend solutions to support the system's telematics and data
         analysis features
     @endcomponent()
-
 
 
     <x-utils.liner-merge-bar :upperColor="'rgba(140, 171, 194, 1)'" :middleColor="'rgba(118, 195, 185, 1)'" :downColor="'rgba(113, 193, 182, 1)'" />
@@ -58,13 +57,12 @@
         'link' => false,
         'technoligies' => ['assets/work-tech/laravel.svg', 'assets/work-tech/mysql.png'],
     ])
-        implemented and maintained robust backend solutions using Laravel.
-        Refactored old code to make it more efficient, resulting in a 50% improvement in response time and performance.
+        implemented and maintained robust backend solutions using<strong class="bold-string"> Laravel</strong>.
+        Refactored old code to make it more efficient, resulting in a <strong class="bold-string">50% improvement in response time and performance</strong >.
         Implemented Laravel's caching features to reduce database load and speed up response times.
         Designed and documented scalable RESTful APIs for seamless integration with front-end.
         Implemented advanced database optimization techniques, such as indexing, query optimization, and migrations, to
-        ensure efficient data
-        handling, even with large datasets.
+        ensure efficient data handling, even with<strong class="bold-string"> large datasets</strong>.
         Writing well designed, testable, efficient code by using the best software development practices.
         Scheduling and creating detailed task breakdowns on ClickUp Software task management platform.
     @endcomponent()
