@@ -10,11 +10,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('throttle:30,1')->get('/', function (Request $request) {
     try{
         if(!session()->has('authenticated')){
-            Visitor::create(['ip_address'=>$request->ip(),"user_agent"=>$request->userAgent(),"session_id"=>23]);
+            Visitor::create(['ip_address'=>$request->ip(),"user_agent"=>$request->userAgent(),"session_id"=>session()->id()]);
         }
-        throw new Error("test throw error in server");
     }catch(Error $e){
         Log::channel('error_web')->alert($e->getMessage());
+
     }finally{
         return view('app');
     }
