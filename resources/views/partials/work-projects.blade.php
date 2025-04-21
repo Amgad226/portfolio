@@ -5,21 +5,51 @@
 </div>
 
 <div id="work-projects">
+    {{-- <h1 style="background: rgb(166, 34, 76)class="title">Work Projects</h1> --}}
     <h1 class="title">Work Projects</h1>
 
+    <x-utils.liner-merge-bar :upperColor="'rgba(143,24,61,0)'" :middleColor="'rgba(143,24,61,0.7)'" :downColor="'rgba(143,24,61,0.9)'" />
+
+    @component('components.work.project', [
+        // 'color' => '#8f183d',
+        'color' => 'rgba(143,24,61,0.9)',
+        'company_name' => 'Wege AE',
+        'role'=>'Devops & Backend Developer',
+        'current_job'=>true,
+        'img' => 'assets/wege.ico',
+        'right' => 0,
+        'from' => '2025-03-15',
+        'to' => 'now',
+        'link' => 'https://wege.ae/',
+        'technoligies' => [
+            'assets/work-tech/docker.webp',
+            'assets/work-tech/nginx.svg',
+            'assets/work-tech/aws.png',
+            'assets/work-tech/django.png',
+            'assets/work-tech/redis.svg',
+            'assets/work-tech/postgres.png',
+        ],
+    ])
+    Contributing to the development and scalability of Wege.ae, a leading UAE-based eCommerce platform.
+    Designed, deployed, and maintained cloud infrastructure on  <strong class="bold-string">AWS</strong>, using services such as  <strong class="bold-string">EC2</strong>,  <strong class="bold-string">S3</strong>,  <strong class="bold-string">RDS</strong>,  <strong class="bold-string">IAM</strong>,  <strong class="bold-string">Lambda</strong>, and Systems Manager to ensure high availability and security.
+    Implemented CI/CD pipelines to streamline development workflows and automate testing, deployment, and monitoring processes.
+    Developed backend services and APIs using Django and Django REST Framework to support various eCommerce operations.
+    Worked on database design and optimization using PostgreSQL and managed migrations, indexing, and performance tuning.
+    Monitored system health and performance using  <strong class="bold-string">AWS CloudWatch</strong> , implementing recommendations for  <strong class="bold-string">cost optimization</strong> and best practices.
+    @endcomponent()
 
 
-    <x-utils.liner-merge-bar :upperColor="'rgba(255,255,255,1)'" :middleColor="'rgb(151, 177, 197)'" :downColor="'rgba(140,171,194,1)'" />
+    <x-utils.liner-merge-bar :upperColor="'rgba(143,24,61,0.9)'" :middleColor="'rgba(143,24,61,0.7)'" :downColor="'rgba(140,171,194,1)'" />
 
     @component('components.work.project', [
         'color' => '#8CABC2',
         'company_name' => 'Scendinivia-tech',
         'role'=>'backend developer',
-        'current_job'=>true,
+        'current_job'=>false,
         'img' => 'assets/scendinavia-tech_compressed.webp',
         'right' => 1,
-        'from' => '2022-09-01',
-        'to' => 'now',
+        'from' => '2024-09-01',
+        'to' => '2025-03-01',
         'link' => 'https://copax-fms.com/',
         'technoligies' => [
             'assets/work-tech/nest.svg',

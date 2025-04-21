@@ -51,6 +51,7 @@
                   <x-experience.element title="PHP" />
                   <x-experience.element title="JavaScript" />
                   <x-experience.element title="TypeScript" />
+                  <x-experience.element title="Python" />
               </div>
 
 
@@ -61,6 +62,7 @@
                   <x-experience.element title="Node" />
                   <x-experience.element title="Express" />
                   <x-experience.element title="Nest" />
+                  <x-experience.element title="Django" />
               </div>
               <div class="experience-section">
 
@@ -73,7 +75,8 @@
 
                   <x-experience.element title="Prisma" />
                   <x-experience.element title="Mongoose" />
-                  <x-experience.element title="Laravel ORM," />
+                  <x-experience.element title="Laravel ORM" />
+                  <x-experience.element title="Django ORM" />
               </div>
 
               {{--  --}}

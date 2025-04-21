@@ -36,4 +36,6 @@ def compress_image(image_path, output_quality=30, max_size_kb=200):
 base_path ="public/assets/"
 fullpath = base_path+input("Enter image sub path:"+base_path)
 print(fullpath)
-compress_image(fullpath, output_quality=50, max_size_kb=500)
+# for image in range(1,6):
+compress_image(f"public/assets/personal-projects/gpsme/4.png", output_quality=80, max_size_kb=1024)
+    

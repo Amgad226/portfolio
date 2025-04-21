@@ -180,7 +180,7 @@
     object-fit: contain;
     /* object-fit: cover; */
 
-    filter: grayscale(.9);
+    filter: grayscale(.5);
 
 }
 
