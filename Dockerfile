@@ -1,7 +1,24 @@
 # ===============================
 # Stage 1: Build frontend assets
 # ===============================
+FROM node:20-alpine AS node-builder
 
+WORKDIR /app
+
+# Copy package files and install dependencies
+COPY package*.json ./
+RUN npm install
+
+# Copy Vite/Tailwind configs and source
+COPY tailwind.config.js postcss.config.js vite.config.js ./
+COPY resources resources
+
+# Build frontend assets
+RUN npm run build
+
+# ===============================
+# Stage 2: PHP Laravel image
+# ===============================
 FROM php:8.2-fpm
 
 WORKDIR /var/www/html
