@@ -1,27 +1,9 @@
 # ===============================
 # Stage 1: Build frontend assets
 # ===============================
-FROM node:20-alpine AS node-builder
 
-WORKDIR /app
-
-# Install dependencies
-COPY package*.json ./
-RUN npm install
-
-# Copy Vite/Tailwind configs
-COPY tailwind.config.js postcss.config.js vite.config.js ./
-COPY resources resources
-
-# Build frontend
-RUN npm run build
-
-# ===============================
-# Stage 2: PHP Laravel image
-# ===============================
 FROM php:8.2-fpm
 
-# Set working directory
 WORKDIR /var/www/html
 
 # Make apt non-interactive
@@ -36,17 +18,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     libzip-dev \
     zlib1g-dev \
-    sqlite3 \
     libsqlite3-dev \
     libxml2-dev \
     libonig-dev \
     build-essential \
     pkg-config \
+    autoconf \
     && docker-php-ext-install -j$(nproc) \
         pdo \
         pdo_sqlite \
         mbstring \
-        tokenizer \
         bcmath \
         xml \
         zip \
@@ -70,7 +51,9 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction --ignore-pl
 # -------------------------------
 COPY . .
 
+# -------------------------------
 # Copy built frontend assets from node-builder
+# -------------------------------
 COPY --from=node-builder /app/public/build public/build
 
 # -------------------------------
