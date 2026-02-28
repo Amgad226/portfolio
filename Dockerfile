@@ -1,4 +1,6 @@
+# ===============================
 # Stage 1: Build frontend assets
+# ===============================
 FROM node:20-alpine AS node-builder
 
 WORKDIR /app
@@ -7,22 +9,28 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
+# Copy Vite/Tailwind configs
 COPY tailwind.config.js postcss.config.js vite.config.js ./
 COPY resources resources
+
+# Build frontend
 RUN npm run build
 
+# ===============================
 # Stage 2: PHP Laravel image
+# ===============================
 FROM php:8.2-fpm
 
+# Set working directory
 WORKDIR /var/www/html
 
-# Install PHP extensions for Laravel
+# Make apt non-interactive
+ENV DEBIAN_FRONTEND=noninteractive
 
 # -------------------------------
-ENV DEBIAN_FRONTEND=noninteractive
+# Install system dependencies + PHP extensions
 # -------------------------------
-# Install system dependencies first
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     unzip \
     curl \
@@ -31,14 +39,17 @@ RUN apt-get update && apt-get install -y \
     sqlite3 \
     libsqlite3-dev \
     libxml2-dev \
-    && docker-php-ext-install \
-       pdo \
-       pdo_sqlite \
-       mbstring \
-       tokenizer \
-       bcmath \
-       xml \
-       zip \
+    libonig-dev \
+    build-essential \
+    pkg-config \
+    && docker-php-ext-install -j$(nproc) \
+        pdo \
+        pdo_sqlite \
+        mbstring \
+        tokenizer \
+        bcmath \
+        xml \
+        zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # -------------------------------
@@ -47,27 +58,32 @@ RUN apt-get update && apt-get install -y \
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # -------------------------------
-# Copy composer files first for caching
+# Copy composer files first (for caching)
 # -------------------------------
 COPY composer.json composer.lock ./
 
-# -------------------------------
 # Install PHP dependencies
-# -------------------------------
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-reqs
 
 # -------------------------------
-# Copy rest of Laravel app
+# Copy Laravel app
 # -------------------------------
 COPY . .
+
 # Copy built frontend assets from node-builder
 COPY --from=node-builder /app/public/build public/build
 
-# Set permissions (optional, for storage & cache)
+# -------------------------------
+# Set permissions for storage & cache
+# -------------------------------
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-# Expose port
+# -------------------------------
+# Expose PHP-FPM port
+# -------------------------------
 EXPOSE 9000
 
+# -------------------------------
 # Run PHP-FPM
+# -------------------------------
 CMD ["php-fpm"]
