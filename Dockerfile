@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
+COPY composer.json composer.lock ./
 RUN composer install --no-dev --optimize-autoloader
 # Copy Laravel app
 COPY . .
