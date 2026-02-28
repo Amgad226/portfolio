@@ -71,6 +71,19 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction --ignore-pl
 # -------------------------------
 COPY --from=node-builder /app/public/build public/build
 
+
+# Ensure required directories exist
+RUN mkdir -p storage/framework/cache \
+    storage/framework/sessions \
+    storage/framework/views \
+    storage/logs \
+    bootstrap/cache
+
+# Set correct permissions
+RUN chown -R www-data:www-data storage bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache
+
+    
 # -------------------------------
 # Set permissions for storage & cache
 # -------------------------------
