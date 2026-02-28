@@ -59,7 +59,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy composer files first (for caching)
 # -------------------------------
 COPY composer.json composer.lock ./
-
+COPY artisan ./
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-reqs
 
