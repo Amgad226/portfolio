@@ -58,15 +58,13 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # -------------------------------
 # Copy composer files first (for caching)
 # -------------------------------
-COPY composer.json composer.lock ./
-COPY artisan ./
 # Install PHP dependencies
+COPY . .
 RUN composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-reqs
 
 # -------------------------------
 # Copy Laravel app
 # -------------------------------
-COPY . .
 
 # -------------------------------
 # Copy built frontend assets from node-builder
