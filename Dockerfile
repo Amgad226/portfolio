@@ -17,18 +17,38 @@ FROM php:8.2-fpm
 WORKDIR /var/www/html
 
 # Install PHP extensions for Laravel
+
+# -------------------------------
+# Install system dependencies and PHP extensions
+# -------------------------------
 RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    curl \
+    libzip-dev \
+    sqlite3 \
     libsqlite3-dev \
-    zip unzip git curl && \
-    docker-php-ext-install pdo pdo_sqlite
+    && docker-php-ext-install pdo pdo_sqlite mbstring tokenizer bcmath xml zip
 
+# -------------------------------
 # Install Composer
+# -------------------------------
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-COPY composer.json composer.lock ./
-RUN composer install --no-dev --optimize-autoloader
-# Copy Laravel app
-COPY . .
 
+# -------------------------------
+# Copy composer files first for caching
+# -------------------------------
+COPY composer.json composer.lock ./
+
+# -------------------------------
+# Install PHP dependencies
+# -------------------------------
+RUN composer install --no-dev --optimize-autoloader
+
+# -------------------------------
+# Copy rest of Laravel app
+# -------------------------------
+COPY . .
 # Copy built frontend assets from node-builder
 COPY --from=node-builder /app/public/build public/build
 
