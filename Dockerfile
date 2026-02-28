@@ -19,16 +19,27 @@ WORKDIR /var/www/html
 # Install PHP extensions for Laravel
 
 # -------------------------------
-# Install system dependencies and PHP extensions
+ENV DEBIAN_FRONTEND=noninteractive
 # -------------------------------
+# Install system dependencies first
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
     curl \
     libzip-dev \
+    zlib1g-dev \
     sqlite3 \
     libsqlite3-dev \
-    && docker-php-ext-install pdo pdo_sqlite mbstring tokenizer bcmath xml zip
+    libxml2-dev \
+    && docker-php-ext-install \
+       pdo \
+       pdo_sqlite \
+       mbstring \
+       tokenizer \
+       bcmath \
+       xml \
+       zip \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # -------------------------------
 # Install Composer
