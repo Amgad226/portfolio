@@ -18,7 +18,10 @@ return [
     |
     */
 
-    'default' => env('LOG_CHANNEL', 'stack'),
+    'default' => env(
+        'LOG_CHANNEL',
+        env('APP_ENV', 'production') === 'production' ? 'stderr' : 'stack'
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,14 +55,12 @@ return [
 
     'channels' => [
 
-        'error_web' => [
-        'driver' => 'single',
-        'path' => storage_path('logs/error_web.log'),
-        'level' => 'alert',
-    ],
         'stack' => [
             'driver' => 'stack',
-            'channels' => explode(',', env('LOG_STACK', 'single')),
+            'channels' => explode(',', env(
+                'LOG_STACK',
+                env('APP_ENV', 'production') === 'production' ? 'stderr' : 'single'
+            )),
             'ignore_exceptions' => false,
         ],
 
@@ -129,7 +130,7 @@ return [
         ],
 
         'emergency' => [
-            'path' => storage_path('logs/laravel.log'),
+            'path' => 'php://stderr',
         ],
 
     ],

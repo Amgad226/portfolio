@@ -20,7 +20,9 @@ Route::middleware('throttle:30,1')->get('/', function (Request $request) {
             );
         }
     } catch (Throwable $exception) {
-        Log::channel('error_web')->alert($exception->getMessage());
+        Log::error('Visitor tracking failed.', [
+            'exception' => $exception,
+        ]);
     }
 
     return view('app');

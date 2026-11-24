@@ -13,6 +13,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+        // PHP-FPM is only reachable through the private Compose Nginx service.
+        // Trust that immediate proxy so Request::ip() uses the client address
+        // forwarded by the host Nginx instead of the Docker bridge address.
+        $middleware->trustProxies(at: '*');
+
         $middleware->append(SecurityHeaders::class);
 
         $middleware->alias([

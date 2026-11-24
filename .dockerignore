@@ -7,6 +7,7 @@
 /storage/*.key
 /storage/pail
 /vendor
+/database/database.sqlite
 /tmp
 .env
 .env.backup
