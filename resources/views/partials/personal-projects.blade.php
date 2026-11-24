@@ -1,5 +1,3 @@
-@vite('resources/css/personal-projects.css')
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll(".toggle-btn").forEach(button => {
@@ -10,10 +8,12 @@
                 if (projectContent.style.display === "none" || projectContent.style.display ===
                     "") {
                     projectContent.style.display = "block";
-                    this.textContent = "Close";
+                    this.textContent = "Hide details";
+                    this.setAttribute("aria-expanded", "true");
                 } else {
                     projectContent.style.display = "none";
-                    this.textContent = "Expand";
+                    this.textContent = "View details";
+                    this.setAttribute("aria-expanded", "false");
                 }
             });
         });
@@ -21,10 +21,37 @@
 </script>
 
 <section id="personal-projects">
-    <h1 class ="title">Personal Projects</h1>
+    <p class="section-kicker">Project archive</p>
+    <h1 class="title">More Projects</h1>
+    <p class="section-intro">A broader archive of backend experiments, internal tools, full-stack applications, automation scripts, and simulations.</p>
 
+    <h2 class="personal-project-title personal-project-title--first">Client systems</h2>
+    <div class="secondary-project-grid archive-featured-projects">
+        <article class="secondary-project">
+            <div class="secondary-project-heading">
+                <img src="{{ asset('assets/personal-projects/dental-clinic/logo.jpg') }}" alt="Dental Clinic Management logo">
+                <div><p>Client system</p><h2>Dental Clinic Management</h2></div>
+            </div>
+            <p>Clinic management backend for patients, appointments, reservations, lab orders, and medicine information.</p>
+            <div class="project-tags"><span>NestJS</span><span>GraphQL</span><span>Prisma</span><span>Docker</span></div>
+            <div class="mini-gallery">
+                <x-utils.image-zoom src="./assets/personal-projects/dental-clinic/1_compressed.webp" />
+                <x-utils.image-zoom src="./assets/personal-projects/dental-clinic/3_compressed.webp" />
+            </div>
+        </article>
 
-    <h1 class ="personal-project-title">Shell scripts</h1>
+        <article class="secondary-project">
+            <div class="secondary-project-heading">
+                <div class="project-lettermark">TM</div>
+                <div><p>Operations tool</p><h2>Ticket Management System</h2></div>
+            </div>
+            <p>Role-based support workflows with ticket lifecycle management, comments, and real-time conversations.</p>
+            <div class="project-tags"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Socket.IO</span></div>
+            <ul class="compact-list"><li>Role-based permissions</li><li>Live support conversations</li><li>Ticket history and status</li></ul>
+        </article>
+    </div>
+
+    <h2 class="personal-project-title">Automation & shell scripts</h2>
 
 
 
@@ -88,7 +115,7 @@
 
 
     <!-- Project 2 -->
-    <h1 class ="personal-project-title">Backend projects</h1>
+    <h2 class="personal-project-title">Backend projects</h2>
 
 
 
@@ -183,7 +210,7 @@
         // 'demo' => '#',
     ])
     @endcomponent
-    <h1 class ="personal-project-title">Fullstack projects</h1>
+    <h2 class="personal-project-title">Full-stack projects</h2>
 
     @component('components.personal-project.personal-project', [
         'logo' => './assets/personal-projects/tt/logo.png',
@@ -218,7 +245,7 @@
     ])
     @endcomponent
 
-    <h1 class ="personal-project-title">Games and Simulation Projects</h1>
+    <h2 class="personal-project-title">Games & simulations</h2>
 
     @component('components.personal-project.personal-project', [
         'logo' => './assets/personal-projects/soku-number/logo_compressed.webp',
@@ -280,5 +307,4 @@
     ])
     @endcomponent
 
-    </div>
 </section>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\AuthenticateUser;
+use App\Http\Middleware\SecurityHeaders;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -11,12 +13,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
-        $middleware->alias([
-            'auth.user' => \App\Http\Middleware\AuthenticateUser::class
-        ]);
-        // $middleware->append();
+        $middleware->append(SecurityHeaders::class);
 
+        $middleware->alias([
+            'auth.user' => AuthenticateUser::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

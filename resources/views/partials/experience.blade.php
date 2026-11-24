@@ -1,226 +1,83 @@
-@vite('resources/css/experience.css')
 <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-      
-
-          <x-experience.container title="devops">
-              <div class="experience-section">
-
-                  <x-experience.element title="Windows" />
-                  <x-experience.element title="Linux" />
-              </div>
-              <div class="experience-section">
-
-                  <x-experience.element title="Bash" />
-                  <x-experience.element title="PowerShell" />
-              </div>
-
-              <div class="experience-section">
-
-                  <x-experience.element title="Gitlab actions" />
-                  <x-experience.element title="Github action" />
-              </div>
-              <div class="experience-section">
-
-                  <x-experience.element title="Nginx" />
-              </div>
-
-              <div class="experience-section">
-                  <x-experience.element title="Docker" />
-              </div>
-
-
-              <div class="experience-section">
-                  <x-experience.element title="Ansible" />
-              </div>
-
-              <div class="experience-section">
-                  <x-experience.element title="Load Balancing" />
-              </div>
-
-
-          </x-experience.container>
-
-
-
-          <x-experience.container title="Backend development">
-              <div class="experience-section">
-
-                  <x-experience.element title="PHP" />
-                  <x-experience.element title="JavaScript" />
-                  <x-experience.element title="TypeScript" />
-                  <x-experience.element title="Python" />
-              </div>
-
-
-
-              <div class="experience-section">
-
-                  <x-experience.element title="Laravel" />
-                  <x-experience.element title="Node" />
-                  <x-experience.element title="Express" />
-                  <x-experience.element title="Nest" />
-                  <x-experience.element title="Django" />
-              </div>
-              <div class="experience-section">
-
-                  <x-experience.element title="MySQL" />
-                  <x-experience.element title="Postgres" />
-                  <x-experience.element title="MongoDB" />
-                  <x-experience.element title="Redis" />
-              </div>
-              <div class="experience-section">
-
-                  <x-experience.element title="Prisma" />
-                  <x-experience.element title="Mongoose" />
-                  <x-experience.element title="Laravel ORM" />
-                  <x-experience.element title="Django ORM" />
-              </div>
-
-              {{--  --}}
-              <div class="experience-section">
-
-                  <x-experience.element title="OOP" />
-                  <x-experience.element title="AOP" />
-                  <x-experience.element title="design patterns." />
-                  <x-experience.element title="SOLID" />
-              </div>
-
-              <div class="experience-section">
-
-                  <x-experience.element title="MVC" />
-                  <x-experience.element title="Modular" />
-                  <x-experience.element title="microservices" />
-                  <x-experience.element title="Monorepo" />
-              </div>
-
-              <div class="experience-section">
-
-                  <x-experience.element title="HTTP" />
-                  <x-experience.element title="gRPC" />
-                  <x-experience.element title="Message brokers " />
-              </div>
-
-
-
-              <div class="experience-section">
-
-                  <x-experience.element title="Plan Driven" />
-                  <x-experience.element title="Agile Methodologies" />
-              </div>
-
-
-              <div class="experience-section">
-
-                  <x-experience.element title="Jira" />
-                  <x-experience.element title="ClickUp" />
-              </div>
-
-              {{--  --}}
-
-              <div class="experience-section">
-
-                  <x-experience.element title="jQuery" />
-                  <x-experience.element title="socket.io" />
-                  <x-experience.element title="apollo" />
-                  <x-experience.element title="puppeteer" />
-              </div>
-
-
-
-              <div class="experience-section">
-
-                  <x-experience.element title="Spatie" />
-                  <x-experience.element title="maatwebsite/excel" />
-              </div>
-
-              <div class="experience-section">
-
-                  <x-experience.element title="WebRTC" />
-                  <x-experience.element title="Web socket" />
-                  <x-experience.element title="pusher" />
-              </div>
-
-
-              <div class="experience-section">
-
-                  <x-experience.element title="REST" />
-                  <x-experience.element title="GraphQL" />
-              </div>
-
-
-              <div class="experience-section">
-
-                  <x-experience.element title="Google Drive" />
-                  <x-experience.element title="Firebase" />
-                  <x-experience.element title="Gmail" />
-              </div>
-
-
-              <div class="experience-section">
-
-                  <x-experience.element title="Rabbit-mq" />
-                  <x-experience.element title="redis" />
-              </div>
-
-              <div class="experience-section">
-
-                  <x-experience.element title="Git branching strategies" />
-                  <x-experience.element title="GitFlow" />
-              </div>
-
-
-
-              <div class="experience-section">
-
-                  <x-experience.element title="Nginx" />
-              </div>
-
-              <div class="experience-section">
-
-                  <x-experience.element title="XSS" />
-                  <x-experience.element title="CSRF" />
-                  <x-experience.element title="SQL Injection" />
-                  <x-experience.element title="Directory Traversal" />
-                  {{-- <x-experience.element title="and other web vulnerability prevention techniques" /> --}}
-              </div>
-
-
-              <div class="experience-section">
-                  <x-experience.element title="Database optimization" />
-              </div>
-
-              <div class="experience-section">
-                  <x-experience.element title="RESTful API development and maintenance" />
-              </div>
-
-
-
-              <div class="experience-section">
-                  <x-experience.element title="Cross-Team Collaboration" />
-              </div>
-
-              <div class="experience-section">
-                  <x-experience.element title="Unit test & Integration test" />
-              </div>
-
-
-
-          </x-experience.container>
-
-
-          <x-experience.container title="Frontend development">
-            <x-experience.element title="Html" />
-            <x-experience.element title="CSS" />
-            <x-experience.element title="JavaScript" />
-            <x-experience.element title="JQuery" />
-            <x-experience.element title="ThreeJs" />
-
-        </x-experience.container>
-
-      </div>
-
-      <x-utils.arrow-move :to="'./#work-projects'"></x-utils.arrow-move>
-  </section>
+    <header class="experience-heading">
+        <p class="section-kicker">Experience overview</p>
+        <h1 class="title">Experience</h1>
+        <p class="section-intro">The three areas I work across when taking a product from an idea to production.</p>
+    </header>
+
+    <div class="experience-details-container">
+        <article class="capability-card capability-card--primary">
+            <div class="capability-heading">
+                <span class="capability-number">01</span>
+                <div>
+                    <p class="capability-label">Backend engineering</p>
+                    <h2>Production backend systems</h2>
+                </div>
+            </div>
+            <p class="capability-copy">Production services built for clear ownership, reliable data flow, and practical performance.</p>
+            <div class="skill-groups">
+                <div><h3>Core stack</h3><p>Node.js · TypeScript · NestJS · Laravel · Django · Python</p></div>
+                <div><h3>Systems</h3><p>PostgreSQL · MongoDB · Redis · RabbitMQ · REST · GraphQL · WebSockets</p></div>
+            </div>
+            <button class="capability-toggle" type="button" aria-expanded="false" aria-controls="backend-details">View full stack</button>
+            <div id="backend-details" class="capability-expanded">
+                <p><strong>Architecture</strong> SOLID, design patterns, modular systems, microservices, monorepos, and gRPC.</p>
+                <p><strong>Data access</strong> Prisma, Mongoose, migrations, indexing, caching, and query performance.</p>
+            </div>
+        </article>
+
+        <article class="capability-card">
+            <div class="capability-heading">
+                <span class="capability-number">02</span>
+                <div>
+                    <p class="capability-label">Cloud & DevOps</p>
+                    <h2>Infrastructure, delivery, and operations</h2>
+                </div>
+            </div>
+            <p class="capability-copy">Repeatable infrastructure and delivery workflows that teams can operate with confidence.</p>
+            <div class="skill-groups">
+                <div><h3>Infrastructure</h3><p>AWS · Docker · Terraform · Ansible · Nginx · Linux</p></div>
+                <div><h3>Delivery & visibility</h3><p>GitHub Actions · GitLab CI/CD · Sentry · Prometheus · Grafana · Loki</p></div>
+            </div>
+            <button class="capability-toggle" type="button" aria-expanded="false" aria-controls="devops-details">View full stack</button>
+            <div id="devops-details" class="capability-expanded">
+                <p><strong>AWS</strong> EC2, RDS, S3, Lambda, ECS/Fargate, IAM, and CloudWatch.</p>
+                <p><strong>Operations</strong> Logs, metrics, alerts, deployment automation, and cost-aware improvements.</p>
+            </div>
+        </article>
+
+        <article class="capability-card">
+            <div class="capability-heading">
+                <span class="capability-number">03</span>
+                <div>
+                    <p class="capability-label">Product engineering</p>
+                    <h2>Web, mobile, and engineering quality</h2>
+                </div>
+            </div>
+            <p class="capability-copy">Useful interfaces connected cleanly to backend systems and supported by automated checks.</p>
+            <div class="skill-groups">
+                <div><h3>Product stack</h3><p>React · React Native · React Query · Zustand · Redux Toolkit</p></div>
+                <div><h3>Quality & leadership</h3><p>Jest · Cypress · E2E testing · Code reviews · Mentoring · Automation</p></div>
+            </div>
+            <button class="capability-toggle" type="button" aria-expanded="false" aria-controls="product-details">View full stack</button>
+            <div id="product-details" class="capability-expanded">
+                <p><strong>Quality</strong> Unit, integration, E2E, and performance testing across product workflows.</p>
+                <p><strong>Leadership</strong> Reviews, mentoring, technical planning, MCP, AI agents, and workflow automation.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.capability-toggle').forEach((button) => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.capability-card');
+                const isExpanded = card.classList.toggle('is-expanded');
+
+                button.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+                button.textContent = isExpanded ? 'Hide full stack' : 'View full stack';
+            });
+        });
+    });
+</script>

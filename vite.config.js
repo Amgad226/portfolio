@@ -15,6 +15,7 @@ export default defineConfig({
                 'resources/css/work-projects.css', 
                 'resources/css/freelance-projects.css', 
                 'resources/css/graduation-project.css', 
+                'resources/css/portfolio-refresh.css',
                 
                 
                 'resources/js/app.js'

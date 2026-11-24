@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -13,25 +14,31 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        $correctPassword = env('ADMIN_PASSWORD');
-        if (!$correctPassword) {
-            return back()->with('error', 'password is not registered');
-        }
-        $request->validate([
-            'password' => 'required|string'
+        $credentials = $request->validate([
+            'password' => ['required', 'string', 'max:255'],
         ]);
 
-        if ($request->password === $correctPassword) {
-            session(['authenticated' => true]); 
-            return redirect()->route('dashboard');
+        $passwordHash = config('services.admin.password_hash');
+
+        if (! $passwordHash) {
+            return back()->with('error', 'Admin access is not configured.');
         }
 
-        return back()->with('error', 'Incorrect password.');
+        if (! Hash::check($credentials['password'], $passwordHash)) {
+            return back()->with('error', 'Incorrect password.');
+        }
+
+        $request->session()->regenerate();
+        $request->session()->put('authenticated', true);
+
+        return redirect()->route('dashboard');
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-        session()->forget('authenticated');
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
         return redirect()->route('app');
     }
 }

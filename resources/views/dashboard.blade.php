@@ -156,7 +156,10 @@
     <div class="container">
         <div class="nav-bar">
             <a href="/">Home</a>
-            <a href="/logout">Logout</a>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit">Logout</button>
+            </form>
         </div>
 
         <h1>Visitor Sessions:{{ count($sessions) }}</h1>

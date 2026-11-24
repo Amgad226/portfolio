@@ -11,11 +11,11 @@
                 @if ($demo ?? false)
                     <div class="project-link">
 
-                        <a href="{{ $demo }}" class="project-link">link</a>
+                        <a href="{{ $demo }}" target="_blank" rel="noreferrer" class="project-link" aria-label="Open {{ $project_title }} demo">Live ↗</a>
                     </div>
                 @endif
             </div>
-            <button style ="background:{{ $logo_background }}" class="toggle-btn">Expand</button>
+            <button style="--project-color:{{ $logo_background }}" class="toggle-btn" type="button" aria-expanded="false">View details</button>
         </div>
         <div class="project-content">
             <div class="project-card">

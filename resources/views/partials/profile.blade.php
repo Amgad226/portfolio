@@ -1,53 +1,40 @@
-@vite('resources/css/profile.css')
 <script>
-    let clickedTimeToNavigate=5;
-    function navigateToDashboard(){
-        if(clickedTimeToNavigate==0){
-            location.href="/dashboard_page_to_access_admin_permissions"
+    let clickedTimeToNavigate = 5;
+
+    function navigateToDashboard() {
+        if (clickedTimeToNavigate === 0) {
+            location.href = "{{ route('dashboard') }}";
         }
         clickedTimeToNavigate--;
     }
 </script>
+
 <section id="profile">
+    <div class="profile-pic-container" onclick="navigateToDashboard()">
+        <x-lazy-image src="./assets/profile-pic_compressed.webp" alt="Portrait of Amjad Alwattar" />
+        <div class="profile-photo-note">Damascus, Syria</div>
+    </div>
 
-        <div class="profile-pic-container" onclick="navigateToDashboard()">
-            <x-lazy-image   class="" src="./assets/profile-pic_compressed.webp"/>
-        </div>
-        <br>
     <div class="profile-text">
-        <p class="profile-text-p1">Hello, I'm</p>
+        <p class="profile-text-p1">Hello, I’m</p>
         <h1 class="title">Amjad Alwattar</h1>
-        <p class="profile-text-p2">Backend Developer & Devops</p>
+        <p class="profile-text-p2">Full-Stack Engineer <span>&</span> DevOps</p>
+
         <div class="btn-container">
-            <x-button type="button" class="btn btn-color-2"
-                onclick="window.open('{{ asset('assets/resume-example.pdf') }}')">
-                Download CV
-            </x-button>
-            <x-button type="button" class="btn btn-color-1" onclick="location.href='#contact'">
-                Contact Info
-            </x-button>
+            <a class="btn btn-color-1" href="#contact">Let’s talk</a>
+            <a class="btn btn-color-2" href="{{ asset('assets/amjad-alwattar-cv.pdf') }}" target="_blank" rel="noreferrer">View CV <span aria-hidden="true">↗</span></a>
         </div>
+
         <div id="socials-container">
-            <div onclick="location.href='https://linkedin.com/in/amjad-alwattar'">
-                @component('components.icon', [
-                    'img' => './assets/linkedin.png',
-                ])
-            {{-- <a href='https://linkedin.com/in/amjad-alwattar'></a> --}}
-
-                @endcomponent
-
-            </div>
-
-            <div onclick="location.href='https://github.com/amgad226'">
-                @component('components.icon', [
-                    'img' => './assets/github.png',
-                ])
-                @endcomponent
-
-            </div>
-
-
-
+            <a href="https://linkedin.com/in/amjad-alwattar" target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
+                <x-icon img="./assets/linkedin.png" />
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/amgad226" target="_blank" rel="noreferrer" aria-label="GitHub profile">
+                <x-icon img="./assets/github.png" />
+                <span>GitHub</span>
+            </a>
         </div>
+
     </div>
 </section>

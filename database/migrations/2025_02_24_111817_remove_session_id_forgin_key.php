@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
@@ -11,9 +9,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('visitors', function (Blueprint $table) {
-            $table->dropForeign(['session_id']); 
-        });
+        // Kept as a no-op so deployments that already ran this migration remain valid.
     }
 
     /**
@@ -21,8 +17,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('visitors', function (Blueprint $table) {
-            $table->foreign('session_id')->constrained('sessions')->nullOnDelete();  
-        });
+        // No foreign key is used because Laravel session IDs are strings.
     }
 };

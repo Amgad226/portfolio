@@ -1,7 +1,8 @@
-@vite('resources/css/graduation-project.css')
-<section>
-    <div id="graduation-project">
-        <h1>My Graduation Project</h1>
+<section id="graduation-project">
+    <div>
+        <p class="section-kicker">Academic capstone</p>
+        <h1 class="title">Graduation Project</h1>
+        <p class="section-intro">A training and certification platform built for York British Academy.</p>
 
         <div class="graduation-project">
             <div class="graduation-project-logo">
@@ -11,47 +12,30 @@
             <div class="graduation-project-text">
                 <div class="project-card">
                     <h2>York British Academy – Training & Certification Platform</h2>
-                    <p><strong>Role:</strong> Backend Developer & DevOps Lead</p>
-                    <p><strong>Team:</strong> 5 Software Engineers</p>
-                    <p><strong>Client:</strong> York British Academy (UK) <a href="https://yorkbritishacademy.uk/">link</a></p> 
+                    <div class="graduation-meta">
+                        <span>Backend & DevOps Lead</span>
+                        <span>5-person team</span>
+                        <a href="https://yorkbritishacademy.uk/" target="_blank" rel="noreferrer">York British Academy ↗</a>
+                    </div>
 
-                    <p>
-                        Our team developed <strong>helpful tools</strong> for York British Academy’s platform, extending
-                        their existing system (V1) with
-                        <strong>native training session management using WebRTC and certificate generation</strong>. The project was
-                        built with a
-                        <strong>microservices architecture</strong> to ensure best practices in scalability and
-                        maintainability.
+                    <p class="graduation-summary">
+                        We extended the academy’s platform with live training, session management, and secure certificate generation using a microservices architecture.
                     </p>
 
-                    <h3>Key Features:</h3>
-                    <ul>
-                        <li><strong>Training Sessions:</strong> Video conferencing, screen sharing, collaborative
-                            whiteboard, session recording, breakout rooms, online assignments with anti-fraud measures,
-                            and reporting.</li>
-                        <li><strong>Session Management:</strong> Scheduling, recorded session access, session
-                            statistics, and reporting.</li>
-                        <li><strong>Certificate Generator:</strong> Customizable certificate templates, secure
-                            certificate issuance, and NFT-based authenticity.</li>
+                    <div class="graduation-features" aria-label="Key features">
+                        <div><strong>Live classrooms</strong><span>WebRTC, screen sharing, whiteboard, and recording</span></div>
+                        <div><strong>Training operations</strong><span>Scheduling, assignments, reports, and session history</span></div>
+                        <div><strong>Certificates</strong><span>Custom templates, secure issuing, and authenticity</span></div>
+                    </div>
+
+                    <h3>My contribution</h3>
+                    <ul class="graduation-contributions">
+                        <li>Led backend architecture and code reviews.</li>
+                        <li>Designed the microservices and service integrations.</li>
+                        <li>Dockerized the stack and automated deployment with GitLab CI/CD.</li>
                     </ul>
 
-                    <h3>My Contributions:</h3>
-                    <ul>
-                        <li>Led the backend team, ensuring high-performance service architecture and conducting code
-                            reviews.</li>
-                        <li>Designed and implemented <strong>microservices</strong> for scalable and modular system
-                            integration.</li>
-                        <li>Deployed the project on a <strong>Windows server</strong> using <strong>Docker</strong> and
-                            <strong>GitLab CI/CD</strong>.</li>
-                        <li>Dockerized multiple technologies: <strong>Node.js, NestJS, Next.js, Laravel, and Flutter
-                                Web</strong>.</li>
-                        <li>Built <strong>CI/CD pipelines</strong> for automated deployment and versioning.</li>
-                    </ul>
-
-                    <p>
-                        At the end of the project, <strong>York British Academy awarded our team certificates</strong> 
-                        for our successful implementation. You can find the certificates in the images below.
-                    </p>
+                    <p class="graduation-note">The academy recognized the team with completion certificates.</p>
 
                 </div>
 
@@ -70,9 +54,10 @@
                 </div>
 
                 <div class="project-links">
-                    <a class="graduation-project-link" href="https://york.amjad.cloud" target="_blank">View Live Project</a>
+                    <a class="graduation-project-link" href="https://york.amjad.cloud" target="_blank" rel="noreferrer">View Live Project ↗</a>
                 </div>
 
             </div>
         </div>
+    </div>
 </section>

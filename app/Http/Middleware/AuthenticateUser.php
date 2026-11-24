@@ -10,7 +10,7 @@ class AuthenticateUser
 {
     public function handle(Request $request, Closure $next): Response
     {
-          if (!session()->has('authenticated')) {
+        if ($request->session()->get('authenticated') !== true) {
             return redirect()->route('login');
         }
 

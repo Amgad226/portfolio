@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('visitors', function (Blueprint $table) {
-            $table->foreignId('session_id')->nullable()->constrained('sessions')->nullOnDelete();
+            $table->string('session_id', 100)->nullable()->index();
         });
     }
 

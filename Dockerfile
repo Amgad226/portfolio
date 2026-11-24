@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Copy package files and install dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 # Copy Vite/Tailwind configs and source
 COPY tailwind.config.js postcss.config.js vite.config.js ./
@@ -19,7 +19,7 @@ RUN npm run build
 # ===============================
 # Stage 2: PHP Laravel image
 # ===============================
-FROM php:8.2-fpm
+FROM php:8.5-fpm
 
 WORKDIR /var/www/html
 
@@ -53,18 +53,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # -------------------------------
 # Install Composer
 # -------------------------------
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# -------------------------------
-# Copy composer files first (for caching)
-# -------------------------------
-# Install PHP dependencies
+# Copy the application, then install production PHP dependencies.
 COPY . .
-RUN composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-reqs
-
-# -------------------------------
-# Copy Laravel app
-# -------------------------------
+RUN composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction --no-progress
 
 # -------------------------------
 # Copy built frontend assets from node-builder
@@ -82,12 +75,6 @@ RUN mkdir -p storage/framework/cache \
 # Set correct permissions
 RUN chown -R www-data:www-data storage bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
-
-    
-# -------------------------------
-# Set permissions for storage & cache
-# -------------------------------
-RUN chown -R www-data:www-data storage bootstrap/cache
 
 # -------------------------------
 # Expose PHP-FPM port

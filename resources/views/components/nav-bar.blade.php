@@ -1,20 +1,34 @@
-<div>
-    <!-- Simplicity is an acquired taste. - Katharine Gerould -->
-    <nav id="desktop-nav">
-        <div id="desktop-nav-name" class="logo">Amjad Alwattar</div>
-        <x-nav-links/>
+<header class="site-header">
+    <nav id="desktop-nav" aria-label="Primary navigation">
+        <a id="desktop-nav-name" class="logo" href="#profile" aria-label="Amjad Alwattar, home">
+            <span>AA</span>
+            Amjad Alwattar
+        </a>
+        <x-nav-links />
     </nav>
-</div>
+</header>
 
-<style>
-      @media screen and (max-width: 1550px) {
-        #desktop-nav-name {
-            display: none;
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('.site-header');
+        const aboutSection = document.querySelector('#about');
+        const mobileViewport = window.matchMedia('(max-width: 780px)');
+
+        if (!header || !aboutSection) {
+            return;
         }
-    }
-    @media screen and (max-width: 1300px) {
-        #desktop-nav {
-            display: none;
-        }
-    }
-</style>
+
+        const updateHeaderVisibility = () => {
+            const hasReachedAbout = window.scrollY >= Math.max(0, aboutSection.offsetTop - 120);
+            const shouldShow = !mobileViewport.matches || hasReachedAbout;
+
+            header.classList.toggle('site-header--visible', shouldShow);
+            header.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
+        };
+
+        window.addEventListener('scroll', updateHeaderVisibility, { passive: true });
+        window.addEventListener('resize', updateHeaderVisibility);
+        mobileViewport.addEventListener('change', updateHeaderVisibility);
+        updateHeaderVisibility();
+    });
+</script>
