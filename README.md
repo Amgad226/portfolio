@@ -22,7 +22,10 @@ Keep `APP_DEBUG=false` in production and configure the dashboard password as a h
 php -r "echo password_hash('your-strong-password', PASSWORD_DEFAULT), PHP_EOL;"
 ```
 
-Put the generated value in `ADMIN_PASSWORD_HASH`. If the hash is missing, dashboard access remains disabled.
+Put the generated value in `ADMIN_PASSWORD_HASH`. Existing VPS deployments
+that still provide `ADMIN_PASSWORD` remain supported for backwards
+compatibility, but should migrate to the hash. If neither value is configured,
+dashboard access remains disabled.
 
 ## Docker
 

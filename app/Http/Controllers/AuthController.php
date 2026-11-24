@@ -19,12 +19,17 @@ class AuthController extends Controller
         ]);
 
         $passwordHash = config('services.admin.password_hash');
+        $legacyPassword = config('services.admin.password');
 
-        if (! $passwordHash) {
+        if (! $passwordHash && ! $legacyPassword) {
             return back()->with('error', 'Admin access is not configured.');
         }
 
-        if (! Hash::check($credentials['password'], $passwordHash)) {
+        $passwordIsValid = $passwordHash
+            ? Hash::check($credentials['password'], $passwordHash)
+            : hash_equals((string) $legacyPassword, $credentials['password']);
+
+        if (! $passwordIsValid) {
             return back()->with('error', 'Incorrect password.');
         }
 

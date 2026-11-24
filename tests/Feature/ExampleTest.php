@@ -30,6 +30,19 @@ class ExampleTest extends TestCase
         $this->assertTrue(session('authenticated'));
     }
 
+    public function test_admin_login_supports_the_legacy_vps_password(): void
+    {
+        config([
+            'services.admin.password_hash' => null,
+            'services.admin.password' => 'legacy-password',
+        ]);
+
+        $response = $this->post('/login', ['password' => 'legacy-password']);
+
+        $response->assertRedirect(route('dashboard'));
+        $this->assertTrue(session('authenticated'));
+    }
+
     public function test_logout_requires_post_and_invalidates_admin_access(): void
     {
         $this->withSession(['authenticated' => true]);

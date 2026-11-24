@@ -37,6 +37,9 @@ return [
 
     'admin' => [
         'password_hash' => env('ADMIN_PASSWORD_HASH'),
+        // Backwards-compatible fallback for existing VPS secrets. New
+        // deployments should use ADMIN_PASSWORD_HASH instead.
+        'password' => env('ADMIN_PASSWORD'),
     ],
 
 ];
